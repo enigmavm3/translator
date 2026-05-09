@@ -80,12 +80,12 @@ document.querySelectorAll('button[data-faq]').forEach(btn => {
   btn.addEventListener('click', function() {
     const parent = this.parentElement;
     const answer = parent.querySelector('.faq-answer');
-    const icon = this.querySelector('span:last-child');
+    const icon = this.querySelector(':scope > span:last-child');
     if (!answer) return;
     const isOpen = answer.style.display !== 'none';
     // Close all
     document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-    document.querySelectorAll('button[data-faq] span:last-child').forEach(s => s.style.transform = 'none');
+    document.querySelectorAll('button[data-faq] > span:last-child').forEach(s => s.style.transform = 'none');
     // Toggle this one
     if (!isOpen) {
       answer.style.display = 'block';
