@@ -2,6 +2,14 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9PB2VHZMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-Z9PB2VHZMN");
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>翻譯小幫手｜LINE 群組即時翻譯機器人｜外籍看護中印越泰語</title>
 <meta name="description" content="LINE 群組即時翻譯機器人，台灣 70 萬看護家庭的溝通神器。雇主打中文，看護自動看到印尼文／越南文／泰文。加進群組 30 秒開始用，每群組 20 則免費翻譯，不綁信用卡。">
@@ -129,6 +137,20 @@ function tagRwd() {
   document.querySelectorAll('blockquote').forEach(el => el.classList.add('rwd-quote'));
 }
 tagRwd();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll('a[href*="lin.ee"]').forEach(function(el){
+      el.addEventListener("click", function(){
+        gtag("event", "cta_click", {
+          event_category: "engagement",
+          event_label: "add_line_friend",
+          page_title: document.title
+        });
+      });
+    });
+  });
 </script>
 </body>
 </html>
