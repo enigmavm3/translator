@@ -14,6 +14,7 @@
 ## 主要頁面
 
 - [產品首頁](https://triplehai.com/translator/)：功能介紹、三步驟使用教學、價格方案、常見問題
+- [LINE 群組翻譯完整教學](https://triplehai.com/translator/line-translation-guide.html)：Google 翻譯、LINE 官方翻譯帳號、鍵盤翻譯、群組翻譯機器人 4 種做法比較，與 30 秒設定教學
 - [印尼看護常用中文句型對照表](https://triplehai.com/translator/phrases.html)：50 句中文↔印尼語照護現場對照（用藥、照護、排班、就醫、日常）
 - [越南看護常用中文句型對照表](https://triplehai.com/translator/phrases-vi.html)：50 句中文↔越南語照護現場對照
 - [泰國看護常用中文句型對照表](https://triplehai.com/translator/phrases-th.html)：50 句中文↔泰語照護現場對照
