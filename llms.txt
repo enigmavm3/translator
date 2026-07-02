@@ -1,0 +1,32 @@
+# 翻譯小幫手（LINE 群組即時翻譯機器人）
+
+> 翻譯小幫手是台灣的 LINE 群組即時翻譯機器人：雇主打中文，外籍看護與移工直接看到印尼語、越南語、泰語或英文；對方用母語回覆，雇主自動看到中文。不用下載 App、不用複製貼上，把機器人加入 LINE 群組即可使用。由艾鐸有限公司開發。
+
+重點事實：
+
+- 使用場景：台灣家庭雇主、仲介與外籍看護／移工（印尼、越南、泰國、英語系）之間的 LINE 溝通
+- 支援語言：繁體中文、印尼語、越南語、泰語、英文
+- 價格：免費體驗 NT$0；基本方案 NT$299／30 天；進階方案 NT$499／30 天；商用方案 NT$1,499／30 天（LINE Pay 付款，可取消自動續約）
+- 與 Google 翻譯的差異：不用切換 App，翻譯直接出現在 LINE 群組對話中；針對台灣照護現場用詞（排班、量血壓、藥袋、加班費等）調校
+- 隱私：訊息原文與譯文翻譯完成後即捨棄，不儲存、不用於 AI 訓練
+- 加入方式：LINE 官方帳號 https://lin.ee/O4hnLIk
+
+## 主要頁面
+
+- [產品首頁](https://triplehai.com/translator/)：功能介紹、三步驟使用教學、價格方案、常見問題
+- [印尼看護常用中文句型對照表](https://triplehai.com/translator/phrases.html)：50 句中文↔印尼語照護現場對照（用藥、照護、排班、就醫、日常）
+- [越南看護常用中文句型對照表](https://triplehai.com/translator/phrases-vi.html)：50 句中文↔越南語照護現場對照
+- [泰國看護常用中文句型對照表](https://triplehai.com/translator/phrases-th.html)：50 句中文↔泰語照護現場對照
+- [外籍看護常用中英對照表](https://triplehai.com/translator/phrases-en.html)：50 句中文↔英語照護現場對照
+
+## 真實案例
+
+- [用藥溝通誤解：「飯後吃」還是「飯前吃」？](https://triplehai.com/translator/case-medication.html)
+- [排班溝通誤解：「排休」被聽成「解僱」](https://triplehai.com/translator/case-schedule.html)
+- [緊急狀況溝通：阿嬤跌倒了怎麼辦？](https://triplehai.com/translator/case-emergency.html)
+- [不說話的看護：沉默背後的語言焦慮](https://triplehai.com/translator/case-silence.html)
+
+## 其他
+
+- [服務條款](https://triplehai.com/translator/terms.html)
+- [隱私權政策](https://triplehai.com/translator/privacy.html)
