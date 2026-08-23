@@ -166,6 +166,15 @@ button { font-family: inherit; }
   ]
 }
 </script>
+<script>
+  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee)
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"]') : null;
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18387420345/MrKQCIS7g-YcELmJ579E'});
+    }
+  }, true);
+</script>
 </head>
 <body>
 
