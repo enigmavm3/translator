@@ -81,4 +81,28 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- 申請指南 -->
+  <url>
+    <loc>https://triplehai.com/translator/guide-hire-foreign-caregiver.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 申請指南 -->
+  <url>
+    <loc>https://triplehai.com/translator/guide-caregiver-over-80.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 申請指南 -->
+  <url>
+    <loc>https://triplehai.com/translator/guide-caregiver-cancer.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
