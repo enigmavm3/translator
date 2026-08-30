@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9PB2VHZMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-Z9PB2VHZMN");
+  gtag("config", "AW-18387420345");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外籍幫傭點數計算器｜2026 新制 4 點門檻線上試算（含就安費）｜翻譯小幫手</title>
+<meta name="description" content="2026 年 4 月新制外籍家庭幫傭點數線上試算：輸入家中子女年齡、特殊身分與同住長輩，30 秒算出累計點數、是否達 4 點門檻、每月就業安定費是 2,000 還是 5,000，以及移工承接順位。">
+<meta property="og:title" content="外籍幫傭點數計算器：30 秒算出你家幾點、就安費多少">
+<meta property="og:description" content="2026 新制 4 點門檻線上試算工具。輸入子女年齡與家庭身分，立刻知道是否符合申請資格。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triplehai.com/translator/tool-helper-points.html">
+<link rel="canonical" href="https://triplehai.com/translator/tool-helper-points.html">
+<link rel="icon" type="image/png" href="icon_t.png">
+<link rel="apple-touch-icon" href="icon_t.png">
+<meta property="og:site_name" content="翻譯小幫手">
+<meta property="og:locale" content="zh_TW">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+html, body { margin:0; padding:0; background:#fbf7ea; }
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; }
+.section-label { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:#1a5c3f; letter-spacing:0.15em; font-weight:600; margin-bottom:10px; }
+.section-text { font-size:20px; color:#3a3830; line-height:1.85; margin:0; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.guide-h2 { font-size:32px; font-weight:700; line-height:1.3; margin:0 0 20px; letter-spacing:-0.01em; color:#0a0a08; font-family:"Noto Serif TC", serif; }
+.guide-table-wrap { overflow-x:auto; margin:24px 0; }
+.guide-table { width:100%; border-collapse:collapse; font-family:"Noto Sans TC", system-ui, sans-serif; font-size:17px; line-height:1.7; background:#ffffff; min-width:520px; }
+.guide-table th { background:#1a5c3f; color:#ffffff; text-align:left; padding:14px 16px; font-weight:600; white-space:nowrap; }
+.guide-table td { border-bottom:1px solid #e8e2d0; padding:14px 16px; color:#3a3830; vertical-align:top; }
+.guide-table tr:last-child td { border-bottom:none; }
+.note-box { background:#fff7e6; border-left:4px solid #c4963c; padding:18px 22px; margin:24px 0; font-family:"Noto Sans TC", system-ui, sans-serif; font-size:16px; line-height:1.8; color:#3a3830; }
+.faq-item { background:#ffffff; padding:22px 26px; margin-bottom:12px; font-family:"Noto Sans TC", system-ui, sans-serif; border-left:4px solid #c4963c; }
+.faq-item .q { font-size:19px; font-weight:700; color:#0a0a08; margin-bottom:8px; }
+.faq-item p { font-size:17px; color:#3a3830; line-height:1.8; margin:0; }
+.src-list { font-family:"Noto Sans TC", system-ui, sans-serif; font-size:15px; line-height:2.0; color:#3a3830; padding-left:20px; margin:8px 0 0; }
+.src-list a { color:#1a5c3f; }
+.solution-box { background:#1a5c3f; color:#ffffff; padding:28px 32px; margin-top:32px; }
+.solution-box .label { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; letter-spacing:0.15em; margin-bottom:10px; font-weight:600; color:rgba(255,255,255,0.7); }
+.solution-box p { font-size:20px; line-height:1.85; margin:0; }
+.solution-box a { color:#ffffff; }
+
+/* ── 計算器 ── */
+.calc-wrap { display:grid; grid-template-columns:1.15fr 0.85fr; gap:28px; align-items:start; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.calc-panel { background:#ffffff; border:1px solid #b8ad8c; padding:28px 30px; }
+.calc-block { margin-bottom:30px; }
+.calc-block:last-child { margin-bottom:0; }
+.calc-block-title { font-size:18px; font-weight:700; color:#0a0a08; margin-bottom:4px; }
+.calc-block-hint { font-size:14px; color:#7a7568; line-height:1.7; margin-bottom:14px; }
+.child-row { border:1px solid #e8e2d0; border-left:4px solid #1a5c3f; background:#fdfcf7; padding:14px 16px; margin-bottom:10px; }
+.child-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+.child-tag { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11px; letter-spacing:0.12em; color:#1a5c3f; font-weight:700; background:#eaf2ee; padding:4px 9px; }
+.child-row select { font-family:"Noto Sans TC", system-ui, sans-serif; font-size:16px; padding:8px 10px; border:1px solid #b8ad8c; background:#ffffff; color:#0a0a08; flex:1; min-width:170px; }
+.btn-x { margin-left:auto; border:none; background:transparent; color:#a09880; font-size:20px; cursor:pointer; line-height:1; padding:4px 6px; }
+.btn-x:hover { color:#c5372c; }
+.chk { display:flex; align-items:flex-start; gap:9px; font-size:15px; color:#3a3830; line-height:1.6; margin-bottom:7px; cursor:pointer; }
+.chk:last-child { margin-bottom:0; }
+.chk input { margin:3px 0 0; width:17px; height:17px; accent-color:#1a5c3f; flex-shrink:0; }
+.chk .pt { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:#1a5c3f; font-weight:700; white-space:nowrap; }
+.btn-add { width:100%; border:1px dashed #1a5c3f; background:#ffffff; color:#1a5c3f; font-family:"Noto Sans TC", system-ui, sans-serif; font-size:16px; font-weight:600; padding:12px; cursor:pointer; }
+.btn-add:hover { background:#eaf2ee; }
+.stepper { display:flex; align-items:center; justify-content:space-between; border:1px solid #e8e2d0; background:#fdfcf7; padding:12px 14px; margin-bottom:10px; gap:12px; }
+.stepper .lbl { font-size:16px; color:#3a3830; line-height:1.5; }
+.stepper .lbl small { display:block; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11px; color:#1a5c3f; font-weight:700; letter-spacing:0.08em; margin-top:2px; }
+.stepper-ctrl { display:flex; align-items:center; gap:0; flex-shrink:0; }
+.stepper-ctrl button { width:38px; height:38px; border:1px solid #b8ad8c; background:#ffffff; color:#1a5c3f; font-size:20px; font-weight:600; cursor:pointer; line-height:1; }
+.stepper-ctrl button:hover { background:#eaf2ee; }
+.stepper-ctrl .val { width:44px; text-align:center; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:19px; font-weight:700; color:#0a0a08; border-top:1px solid #b8ad8c; border-bottom:1px solid #b8ad8c; height:38px; line-height:38px; }
+.result-card { background:#0a0a08; color:#ffffff; padding:30px; position:sticky; top:20px; }
+.result-badge { display:inline-block; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; letter-spacing:0.18em; font-weight:700; padding:6px 14px; margin-bottom:18px; }
+.badge-ok { background:#1a5c3f; color:#ffffff; }
+.badge-no { background:#5a5448; color:#e0dbc9; }
+.result-num { font-family:"Noto Serif TC", serif; font-size:76px; font-weight:900; line-height:1; letter-spacing:-0.03em; }
+.result-num span { font-size:26px; font-weight:600; margin-left:6px; }
+.result-msg { font-size:17px; line-height:1.75; color:#e0dbc9; margin:16px 0 0; }
+.result-msg strong { color:#ffffff; }
+.result-divider { border-top:1px solid rgba(255,255,255,0.15); margin:22px 0; }
+.result-kv { display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:15px; color:#9a9485; margin-bottom:12px; }
+.result-kv b { color:#ffffff; font-size:19px; font-weight:700; text-align:right; }
+.detail-title { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11px; letter-spacing:0.15em; color:#9a9485; font-weight:600; margin-bottom:10px; }
+.detail-list { list-style:none; padding:0; margin:0; font-size:14px; line-height:1.7; }
+.detail-list li { display:flex; justify-content:space-between; gap:10px; color:#c9c4b2; padding:6px 0; border-bottom:1px dotted rgba(255,255,255,0.12); }
+.detail-list li:last-child { border-bottom:none; }
+.detail-list li b { color:#ffffff; font-family:ui-monospace,"SF Mono",Menlo,monospace; white-space:nowrap; }
+.detail-list li.zero { color:#7a7568; }
+.result-cta { display:block; text-align:center; background:#ffffff; color:#1a5c3f; padding:15px; font-weight:700; font-size:17px; text-decoration:none; margin-top:22px; }
+.calc-foot { font-size:13px; color:#7a7568; line-height:1.75; margin-top:16px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+@media (max-width: 900px) {
+  .calc-wrap { grid-template-columns:1fr; }
+  .result-card { position:static; }
+}
+@media (max-width: 768px) {
+  h1 { font-size: 36px !important; }
+  .rwd-inner { padding: 0 20px !important; }
+  header > div { padding: 0 20px !important; }
+  footer > div { padding: 0 20px !important; }
+  .rwd-footer { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+  .rwd-footer > div:first-child { grid-column: 1 / -1 !important; }
+  .guide-h2 { font-size: 26px !important; }
+  .calc-panel { padding:22px 18px; }
+  .result-card { padding:24px 20px; }
+  .result-num { font-size:62px; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 30px !important; }
+  .rwd-footer { grid-template-columns: 1fr !important; }
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "外籍幫傭點數計算器", "url": "https://triplehai.com/translator/tool-helper-points.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "inLanguage": "zh-TW", "description": "2026 年新制外籍家庭幫傭點數線上試算工具：計算累計點數、4 點門檻資格、每月就業安定費與移工承接順位。", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TWD"}, "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "翻譯小幫手", "item": "https://triplehai.com/translator/"}, {"@type": "ListItem", "position": 2, "name": "外籍家庭幫傭 2026 新制", "item": "https://triplehai.com/translator/guide-domestic-helper.html"}, {"@type": "ListItem", "position": 3, "name": "外籍幫傭點數計算器", "item": "https://triplehai.com/translator/tool-helper-points.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+{"@type": "Question", "name": "同一個小孩符合多種身分，點數可以相加嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不能相加。計點以「人」為單位，同一名子女符合多種身分時採計其中最高的一項。例如單親家庭的 4 歲子女，不是未滿 6 歲 6 點加單親 6 點等於 12 點，而是取最高的 6 點。實際採計方式以勞動部審核為準。"}},
+{"@type": "Question", "name": "外籍幫傭要幾點才能申請？", "acceptedAnswer": {"@type": "Answer", "text": "2026 年 4 月 13 日新制上路後，同一戶累計滿 4 點即可申請。家中有 1 名滿 6 歲未滿 12 歲子女即為 4 點，未滿 6 歲子女為 6 點，單一子女家庭就符合資格。每戶以聘僱 1 名家庭幫傭為限。"}},
+{"@type": "Question", "name": "點數滿 10 點和 4 點差在哪裡？", "acceptedAnswer": {"@type": "Answer", "text": "都符合申請資格，差別在就業安定費與移工承接順位：累計滿 10 點者每月就業安定費 2,000 元、承接順位第三、四；4 至 9 點者每月 5,000 元、承接順位第五、六。兩者每年就安費差額為 36,000 元。"}},
+{"@type": "Question", "name": "同住的長輩可以列入幫傭點數嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。同一戶滿 75 歲未滿 80 歲的長輩每人 1 點，滿 80 歲以上每人 2 點。若長輩本身失能且符合家庭看護工資格（例如 80 歲以上免巴氏量表），也可以改走家庭看護工的申請通道，兩者是不同制度。"}}
+]}
+</script>
+<script>
+  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee)
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"]') : null;
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18387420345/MrKQCIS7g-YcELmJ579E'});
+    }
+  }, true);
+</script>
+</head>
+<body>
+<article style="background:#fbf7ea;color:#0a0a08;font-family:'Noto Serif TC', serif;line-height:1.7">
+
+<header style="border-bottom:1px solid #0a0a08;padding:20px 0 16px;font-family:'Noto Serif TC', serif;border-top:6px solid #1a5c3f"><div style="max-width:1120px;margin:0 auto;padding:0 40px;text-align:center"><a href="./" style="text-decoration:none"><div style="font-family:'Noto Serif TC', serif;font-size:32px;font-weight:900;letter-spacing:0.1em;color:#0a0a08">翻譯小幫手</div></a><div style="margin-top:8px;border-top:2px double #0a0a08;width:120px;margin:10px auto 0"></div></div></header>
+
+<section style="max-width:900px;margin:0 auto;padding:72px 40px 40px;text-align:center">
+<div style="display:inline-block;background:#1a5c3f;color:#ffffff;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;letter-spacing:0.25em;padding:6px 16px;margin-bottom:32px;font-weight:600">免 費 工 具 · 2026 新 制</div>
+<h1 style="font-size:clamp(38px, 6vw, 56px);line-height:1.25;font-weight:700;letter-spacing:-0.01em;margin-bottom:24px;color:#0a0a08">外籍幫傭點數計算器</h1>
+<p style="font-size:22px;color:#3a3830;max-width:660px;margin:0 auto 16px;line-height:1.85">2026 年 4 月新制：同一戶累計滿 <strong>4 點</strong>就能申請家庭幫傭。填一下家裡的組成，馬上知道你家幾點、就業安定費是 2,000 還是 5,000。</p>
+<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#3a3830;letter-spacing:0.08em;margin-top:8px">依 2026-04-13 新制點數表 · 更新日期：2026-08-30</div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:0 40px 72px" class="rwd-inner">
+<div class="calc-wrap">
+
+  <!-- 輸入面板 -->
+  <div class="calc-panel">
+
+    <div class="calc-block">
+      <div class="calc-block-title">① 家中未滿 12 歲子女</div>
+      <div class="calc-block-hint">一位一列。同一位子女符合多種身分時，系統自動取「最高的一項」計點，不重複累加。</div>
+      <div id="childList"></div>
+      <button class="btn-add" id="btnAddChild" type="button">＋ 新增一位子女</button>
+    </div>
+
+    <div class="calc-block">
+      <div class="calc-block-title">② 同住長輩</div>
+      <div class="calc-block-hint">與雇主同一戶籍的長輩，依年齡逐人計點。</div>
+      <div class="stepper">
+        <div class="lbl">滿 75 歲、未滿 80 歲<small>每人 1 點</small></div>
+        <div class="stepper-ctrl">
+          <button type="button" data-elder="e75" data-d="-1">−</button>
+          <div class="val" id="valE75">0</div>
+          <button type="button" data-elder="e75" data-d="1">＋</button>
+        </div>
+      </div>
+      <div class="stepper">
+        <div class="lbl">滿 80 歲以上<small>每人 2 點</small></div>
+        <div class="stepper-ctrl">
+          <button type="button" data-elder="e80" data-d="-1">−</button>
+          <div class="val" id="valE80">0</div>
+          <button type="button" data-elder="e80" data-d="1">＋</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-block">
+      <div class="calc-block-title">③ 家庭身分</div>
+      <div class="calc-block-hint">以下身分會套用到每一位未滿 12 歲子女（與該子女自身的年齡／身心狀況取高者）。</div>
+      <label class="chk"><input type="checkbox" id="fSpecial"><span>特殊境遇家庭（已取得核定） <span class="pt">子女各 10 點</span></span></label>
+      <label class="chk"><input type="checkbox" id="fSingle"><span>單親家庭（未婚、離婚、喪偶） <span class="pt">子女各 6 點</span></span></label>
+      <label class="chk"><input type="checkbox" id="fDisabledParent"><span>父或母領有身心障礙證明 <span class="pt">子女各 6 點</span></span></label>
+    </div>
+
+  </div>
+
+  <!-- 結果面板 -->
+  <div>
+    <div class="result-card">
+      <div class="result-badge badge-no" id="badge">尚 未 達 標</div>
+      <div class="result-num" id="total">0<span>點</span></div>
+      <p class="result-msg" id="msg">先在左邊加入家中成員，這裡會即時算出累計點數。</p>
+      <div class="result-divider"></div>
+      <div class="result-kv"><span>每月就業安定費</span><b id="fee">—</b></div>
+      <div class="result-kv"><span>移工承接順位</span><b id="rank">—</b></div>
+      <div class="result-divider"></div>
+      <div class="detail-title">計 點 明 細</div>
+      <ul class="detail-list" id="detail"><li class="zero">尚無資料</li></ul>
+      <a href="guide-helper-application.html" class="result-cta" id="ctaBtn">看申請流程與文件清單 →</a>
+    </div>
+    <div class="calc-foot">試算結果僅供參考，實際資格與費用以勞動部及各地方主管機關審核為準。同一對象符合多種身分之採計方式，如有疑義請撥勞動部 <strong>1955</strong> 專線確認。</div>
+  </div>
+
+</div>
+</section>
+
+<section style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
+<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
+
+<div style="margin-bottom:56px">
+<div class="section-label">計 算 規 則</div>
+<h2 class="guide-h2">這個計算器是怎麼算的</h2>
+<p class="section-text">2026 年 4 月 13 日起，外籍家庭幫傭改採新點數制，同一戶<strong>累計滿 4 點即可申請</strong>（舊制的 16 點、3 名子女已走入歷史）。計點以「人」為單位：</p>
+<div class="guide-table-wrap"><table class="guide-table">
+<tr><th>計點對象（同一戶）</th><th>點數</th></tr>
+<tr><td>未滿 6 歲子女</td><td><strong>6</strong></td></tr>
+<tr><td>滿 6 歲、未滿 12 歲子女</td><td><strong>4</strong></td></tr>
+<tr><td>未滿 6 歲之發展遲緩兒童</td><td><strong>10</strong></td></tr>
+<tr><td>未滿 12 歲之罕見疾病或身心障礙兒童</td><td><strong>10</strong></td></tr>
+<tr><td>特殊境遇家庭之未滿 12 歲子女</td><td><strong>10</strong></td></tr>
+<tr><td>單親（未婚、離婚、喪偶）之未滿 12 歲子女</td><td><strong>6</strong></td></tr>
+<tr><td>父或母為身心障礙者之未滿 12 歲子女</td><td><strong>6</strong></td></tr>
+<tr><td>滿 75 歲、未滿 80 歲長輩</td><td><strong>1</strong></td></tr>
+<tr><td>滿 80 歲以上長輩</td><td><strong>2</strong></td></tr>
+</table></div>
+<div class="note-box">💡 <strong>最常見的算錯：把同一個小孩的身分點數相加。</strong>單親家庭的 4 歲孩子不是「未滿 6 歲 6 點 ＋ 單親 6 點 ＝ 12 點」，而是取最高的一項 ＝ 6 點。本計算器一律以「每位子女取最高一項」計算，長輩則逐人累加。</div>
+</div>
+
+<div style="margin-bottom:56px">
+<div class="section-label">點 數 影 響 什 麼</div>
+<h2 class="guide-h2">滿 10 點，一年省 36,000</h2>
+<div class="guide-table-wrap"><table class="guide-table">
+<tr><th>累計點數</th><th>就業安定費（每月）</th><th>移工承接順位</th></tr>
+<tr><td><strong>滿 10 點</strong></td><td><strong>NT$2,000</strong></td><td>第三、四順位（較優先）</td></tr>
+<tr><td><strong>4–9 點</strong></td><td><strong>NT$5,000</strong></td><td>第五、六順位</td></tr>
+<tr><td>未滿 4 點</td><td colspan="2">尚不符合家庭幫傭申請資格</td></tr>
+</table></div>
+<p class="section-text">兩級之間每月差 3,000 元、一年差 36,000 元，順位也影響等到人的時間。因此把家中所有可計點的成員都列進去（尤其是最常被忘記的<strong>同住 75 歲以上長輩</strong>）很重要。</p>
+</div>
+
+<div style="margin-bottom:56px">
+<div class="section-label">常 見 問 題</div>
+<h2 class="guide-h2">試算完最常被問的 4 件事</h2>
+<div class="faq-item"><div class="q">Q1．算出來未滿 4 點，就完全沒辦法了嗎？</div><p>家庭幫傭這條路暫時不符合，但如果家中有失能長輩，可以改看<strong>家庭看護工</strong>——那是另一套制度，看的是被看護者的狀況（80 歲以上免巴氏量表、癌症二期以上免評等），與點數無關。詳見 <a href="guide-helper-vs-caregiver.html" style="color:#1a5c3f">幫傭與看護的差別</a>。</p></div>
+<div class="faq-item"><div class="q">Q2．小孩快滿 12 歲了，還能申請嗎？</div><p>資格以申請當下的點數認定。聘僱許可有效期間內聘僱關係持續，期滿展延依當時規定辦理，建議送件前先撥 1955 確認。</p></div>
+<div class="faq-item"><div class="q">Q3．每戶可以請幾名幫傭？</div><p>不論點數多高，每戶都以聘僱 <strong>1 名</strong>家庭幫傭為限。</p></div>
+<div class="faq-item"><div class="q">Q4．算完之後要準備什麼？</div><p>戶口名簿是核心文件（證明計點成員與雇主同戶、確認年齡），另依計點項目附身心障礙證明、罕病或發展遲緩診斷證明、特境核定文件等。完整清單與 5 個申請步驟見 <a href="guide-helper-application.html" style="color:#1a5c3f">幫傭申請流程指南</a>。</p></div>
+</div>
+
+<div class="solution-box">
+<div class="label">幫 傭 報 到 之 後</div>
+<p>幫傭多來自印尼、菲律賓等地，語言是接下來的第一關。「翻譯小幫手」（LINE 認證帳號）加進你和幫傭的 LINE 群組，你打中文、她看到母語——小孩作息、飲食過敏、家務細節，第一天就能講清楚，免下載 App。<a href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener"><strong>加 LINE 好友免費試用 →</strong></a></p>
+</div>
+
+<div style="margin-top:56px">
+<div class="section-label">資 料 來 源</div>
+<ul class="src-list">
+<li><a href="https://udn.com/news/story/7266/9388973" target="_blank" rel="noopener">聯合新聞網：放寬！家有 1 孩就可申請外傭，4 月開放受理、144 萬家戶適用（引勞動部）</a></li>
+<li><a href="https://dhsc.wda.gov.tw/" target="_blank" rel="noopener">勞動部勞動力發展署 直接聘僱聯合服務中心</a></li>
+<li><a href="https://www.wda.gov.tw/" target="_blank" rel="noopener">勞動部勞動力發展署（家庭幫傭聘僱資格公告）</a></li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- 延伸閱讀 -->
+<section style="padding:64px 0;max-width:1120px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#1a5c3f;letter-spacing:0.2em;margin-bottom:20px;font-weight:600">延 伸 閱 讀</div>
+<h2 style="font-size:36px;font-weight:700;line-height:1.25;margin-bottom:32px;letter-spacing:-0.01em">你可能也想看</h2>
+<a href="guide-domestic-helper.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f">外籍幫傭 2026 新制：4 點門檻與點數表完整解析 →</a>
+<a href="guide-helper-application.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f">外籍幫傭申請流程：文件、步驟、時程、費用 →</a>
+<a href="guide-helper-vs-caregiver.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f">幫傭 vs 看護：資格、費用、申請方式比較 →</a>
+<a href="guide-hire-foreign-caregiver.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f">聘僱外籍看護完整指南：資格、流程、費用一次看懂 →</a>
+<a href="https://triplehai.com/agencies/" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #c5372c">找仲介？全台 1,503 家移工仲介目錄，勞動部評鑑分數一次查 →</a>
+<a href="./" style="display:block;padding:16px 20px;background:#fbf7ea;margin-bottom:8px;text-decoration:none;color:#1a5c3f;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #b8ad8c;font-weight:600">← 回到翻譯小幫手首頁</a>
+</div>
+</section>
+
+<section style="background:#1a5c3f;padding:72px 0">
+<div style="max-width:800px;margin:0 auto;padding:0 40px;text-align:center">
+<h2 style="color:#ffffff;font-size:46px;font-weight:700;line-height:1.25;margin-bottom:16px;letter-spacing:-0.01em">幫傭報到後，第一週就用得上</h2>
+<p style="color:rgba(255,255,255,0.8);font-size:22px;line-height:1.8;margin-bottom:32px">每個 LINE 群組 50 則免費翻譯，不綁定信用卡。<br/>零下載、零設定、零註冊，不用教幫傭怎麼用。</p>
+<a href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1a5c3f;padding:18px 40px;font-family:'Noto Sans TC', system-ui, sans-serif;font-weight:600;font-size:20px;text-decoration:none;letter-spacing:0.03em">加入 LINE 好友，免費試用 →</a>
+<div style="margin-top:16px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.08em">或回到 <a href="./" style="color:rgba(255,255,255,0.8)">首頁</a> 看完整介紹</div>
+</div>
+</section>
+
+<footer style="border-top:6px solid #1a5c3f;padding:56px 0 40px;background:#0a0a08;color:#c9c4b2;font-family:'Noto Sans TC', system-ui, sans-serif"><div style="max-width:1120px;margin:0 auto;padding:0 40px"><div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;align-items:start" class="rwd-footer"><div><div style="font-family:'Noto Serif TC', serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:12px;letter-spacing:0.05em">翻譯小幫手</div><div style="font-size:14px;line-height:1.85;color:#9a9485">LINE 群組即時翻譯機器人<br/>支援繁中 / 印尼 / 越南 / 泰 / 菲律賓 / 英文</div></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">服務</div><a href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">加 LINE 好友</a><a href="pricing.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">方案與價格</a><a href="line-translation-guide.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">LINE 群組翻譯教學</a><a href="phrases.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">看護常用句型對照表</a></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">法律</div><a href="terms.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">服務條款</a><a href="privacy.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">隱私權政策</a></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">聯絡</div><a href="mailto:contact@triplehai.com" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px;word-break:break-all">contact@triplehai.com</a></div></div><div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#7a7568;letter-spacing:0.05em"><div>© 2026 艾鐸有限公司 · 翻譯小幫手 · 統一編號 62222415</div><div>付款服務由 LINE Pay 提供</div></div></div></footer>
+
+</article>
+
+<script>
+(function () {
+  var children = [];   // {id, age:'u6'|'6to11'|'o12', delay:bool, disab:bool}
+  var elders = { e75: 0, e80: 0 };
+  var seq = 0;
+  var reported = false;
+
+  var listEl = document.getElementById('childList');
+
+  function addChild(age) {
+    children.push({ id: ++seq, age: age || 'u6', delay: false, disab: false });
+    render();
+  }
+
+  function render() {
+    listEl.innerHTML = '';
+    children.forEach(function (c, i) {
+      var row = document.createElement('div');
+      row.className = 'child-row';
+      row.innerHTML =
+        '<div class="child-head">' +
+          '<span class="child-tag">子女 ' + (i + 1) + '</span>' +
+          '<select data-id="' + c.id + '" data-f="age">' +
+            '<option value="u6"' + (c.age === 'u6' ? ' selected' : '') + '>未滿 6 歲</option>' +
+            '<option value="6to11"' + (c.age === '6to11' ? ' selected' : '') + '>滿 6 歲、未滿 12 歲</option>' +
+            '<option value="o12"' + (c.age === 'o12' ? ' selected' : '') + '>已滿 12 歲（不計點）</option>' +
+          '</select>' +
+          '<button class="btn-x" type="button" data-id="' + c.id + '" data-f="del" title="移除">×</button>' +
+        '</div>' +
+        '<label class="chk"><input type="checkbox" data-id="' + c.id + '" data-f="delay"' + (c.delay ? ' checked' : '') + '><span>領有發展遲緩證明（未滿 6 歲適用） <span class="pt">10 點</span></span></label>' +
+        '<label class="chk"><input type="checkbox" data-id="' + c.id + '" data-f="disab"' + (c.disab ? ' checked' : '') + '><span>罕見疾病或領有身心障礙證明 <span class="pt">10 點</span></span></label>';
+      listEl.appendChild(row);
+    });
+    calc();
+  }
+
+  // 單一子女：取所有符合身分中最高的一項，不累加
+  function childPoints(c, fam) {
+    if (c.age === 'o12') return { pts: 0, why: '已滿 12 歲，不計點' };
+    var cands = [];
+    if (c.age === 'u6') cands.push([6, '未滿 6 歲子女']);
+    if (c.age === '6to11') cands.push([4, '滿 6 歲未滿 12 歲子女']);
+    if (c.delay && c.age === 'u6') cands.push([10, '未滿 6 歲發展遲緩兒童']);
+    if (c.disab) cands.push([10, '罕病或身心障礙兒童']);
+    if (fam.special) cands.push([10, '特殊境遇家庭之子女']);
+    if (fam.single) cands.push([6, '單親家庭之子女']);
+    if (fam.dparent) cands.push([6, '父母為身心障礙者之子女']);
+    // 平手時取後者（家庭身分較具體），讓使用者看得出該身分有被採計
+    var best = cands[0];
+    cands.forEach(function (x) { if (x[0] >= best[0]) best = x; });
+    return { pts: best[0], why: best[1] };
+  }
+
+  function calc() {
+    var fam = {
+      special: document.getElementById('fSpecial').checked,
+      single: document.getElementById('fSingle').checked,
+      dparent: document.getElementById('fDisabledParent').checked
+    };
+
+    var total = 0;
+    var rows = [];
+
+    children.forEach(function (c, i) {
+      var r = childPoints(c, fam);
+      total += r.pts;
+      rows.push({ name: '子女 ' + (i + 1) + '：' + r.why, pts: r.pts });
+    });
+    if (elders.e75 > 0) { total += elders.e75 * 1; rows.push({ name: '75–79 歲長輩 × ' + elders.e75, pts: elders.e75 * 1 }); }
+    if (elders.e80 > 0) { total += elders.e80 * 2; rows.push({ name: '80 歲以上長輩 × ' + elders.e80, pts: elders.e80 * 2 }); }
+
+    document.getElementById('total').innerHTML = total + '<span>點</span>';
+
+    var badge = document.getElementById('badge');
+    var msg = document.getElementById('msg');
+    var fee = document.getElementById('fee');
+    var rank = document.getElementById('rank');
+    var cta = document.getElementById('ctaBtn');
+
+    if (total >= 10) {
+      badge.textContent = '符 合 · 優 惠 級';
+      badge.className = 'result-badge badge-ok';
+      msg.innerHTML = '<strong>符合申請資格，且達 10 點優惠級。</strong>就業安定費每月省 3,000 元（一年 36,000），移工承接順位也較前面。';
+      fee.textContent = 'NT$2,000';
+      rank.textContent = '第三、四順位';
+      cta.textContent = '看申請流程與文件清單 →';
+      cta.setAttribute('href', 'guide-helper-application.html');
+    } else if (total >= 4) {
+      var gap = 10 - total;
+      badge.textContent = '符 合 資 格';
+      badge.className = 'result-badge badge-ok';
+      msg.innerHTML = '<strong>已達 4 點門檻，可以提出申請。</strong>再 ' + gap + ' 點就進入 10 點優惠級（就安費降為 2,000）——別忘了把同住的 75 歲以上長輩也列進去。';
+      fee.textContent = 'NT$5,000';
+      rank.textContent = '第五、六順位';
+      cta.textContent = '看申請流程與文件清單 →';
+      cta.setAttribute('href', 'guide-helper-application.html');
+    } else if (total > 0) {
+      badge.textContent = '尚 未 達 標';
+      badge.className = 'result-badge badge-no';
+      msg.innerHTML = '距離 4 點門檻還差 <strong>' + (4 - total) + ' 點</strong>。若家中有失能長輩，可以改看<strong>家庭看護工</strong>——那是另一套資格制度，與點數無關。';
+      fee.textContent = '—';
+      rank.textContent = '—';
+      cta.textContent = '看看家庭看護工的資格 →';
+      cta.setAttribute('href', 'guide-helper-vs-caregiver.html');
+    } else {
+      badge.textContent = '尚 未 達 標';
+      badge.className = 'result-badge badge-no';
+      msg.textContent = '先在左邊加入家中成員，這裡會即時算出累計點數。';
+      fee.textContent = '—';
+      rank.textContent = '—';
+      cta.textContent = '看申請流程與文件清單 →';
+      cta.setAttribute('href', 'guide-helper-application.html');
+    }
+
+    var detail = document.getElementById('detail');
+    if (rows.length === 0) {
+      detail.innerHTML = '<li class="zero">尚無資料</li>';
+    } else {
+      detail.innerHTML = rows.map(function (r) {
+        return '<li class="' + (r.pts === 0 ? 'zero' : '') + '"><span>' + r.name + '</span><b>' + r.pts + ' 點</b></li>';
+      }).join('');
+    }
+
+    // GA4：第一次算出有效點數時回報一次
+    if (!reported && total > 0 && typeof gtag === 'function') {
+      reported = true;
+      gtag('event', 'tool_calculate', { tool: 'helper_points', points: total, qualified: total >= 4 });
+    }
+  }
+
+  // 事件委派
+  listEl.addEventListener('change', function (e) {
+    var t = e.target, id = +t.getAttribute('data-id'), f = t.getAttribute('data-f');
+    if (!id || !f) return;
+    var c = children.filter(function (x) { return x.id === id; })[0];
+    if (!c) return;
+    if (f === 'age') { c.age = t.value; render(); }
+    else { c[f] = t.checked; calc(); }
+  });
+  listEl.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.getAttribute && t.getAttribute('data-f') === 'del') {
+      var id = +t.getAttribute('data-id');
+      children = children.filter(function (x) { return x.id !== id; });
+      render();
+    }
+  });
+  document.getElementById('btnAddChild').addEventListener('click', function () { addChild('u6'); });
+  ['fSpecial', 'fSingle', 'fDisabledParent'].forEach(function (id) {
+    document.getElementById(id).addEventListener('change', calc);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-elder]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var k = btn.getAttribute('data-elder'), d = +btn.getAttribute('data-d');
+      elders[k] = Math.max(0, Math.min(9, elders[k] + d));
+      document.getElementById(k === 'e75' ? 'valE75' : 'valE80').textContent = elders[k];
+      calc();
+    });
+  });
+
+  addChild('u6');   // 預設先給一位，降低空白畫面門檻
+})();
+</script>
+</body>
+</html>

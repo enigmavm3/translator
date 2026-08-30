@@ -33,6 +33,10 @@
 - [幫傭 vs 看護比較](https://triplehai.com/translator/guide-helper-vs-caregiver.html)：兩種制度的資格、費用、申請方式一張表比較
 - [外籍幫傭申請流程](https://triplehai.com/translator/guide-helper-application.html)：文件清單、5 個步驟、時程與費用
 
+## 免費工具
+
+- [外籍幫傭點數計算器](https://triplehai.com/translator/tool-helper-points.html)：2026 新制點數線上試算，輸入子女年齡、家庭身分與同住長輩，算出累計點數、是否達 4 點門檻、每月就業安定費（2,000 或 5,000）與移工承接順位。計點規則：同一位子女符合多種身分時取最高一項，不累加；長輩逐人累加
+
 ## 真實案例
 
 - [用藥溝通誤解：「飯後吃」還是「飯前吃」？](https://triplehai.com/translator/case-medication.html)
