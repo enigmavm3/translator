@@ -1226,6 +1226,23 @@
       }
     }, true);
   </script>
+  <script>
+    // 來源歸因：Google Ads 點擊（gclid/gad_source/gbraid/wbraid）進站時，把 LINE 加好友連結換成「Google廣告」管道連結；
+    // 旗標存 sessionStorage，站內換頁後仍維持。其餘訪客用「官網」管道連結。
+    (function () {
+      try {
+        var q = location.search;
+        if (/[?&](gclid|gad_source|gbraid|wbraid)=/.test(q)) sessionStorage.setItem('src', 'gads');
+        if (sessionStorage.getItem('src') === 'gads') {
+          var fix = function () {
+            var links = document.querySelectorAll('a[href*="lin.ee/vX3Iv8U"]');
+            for (var i = 0; i < links.length; i++) links[i].href = 'https://lin.ee/waihMSZ';
+          };
+          if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
+        }
+      } catch (err) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">直接看主要內容</a>
@@ -1238,7 +1255,7 @@
         <img src="icon_t.png" alt="">
         <span>翻譯小幫手</span>
       </a>
-      <a class="header-cta" href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener">
+      <a class="header-cta" href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener">
         <span class="line-mark" aria-hidden="true">LINE</span>
         馬上加好友
       </a>
@@ -1254,7 +1271,7 @@
           <p class="hero-lead"><strong>你只要說中文，外籍幫手就聽懂你要她做的事情。</strong><br>少一點猜測，多一點放心，照顧從此更有默契。</p>
 
           <div class="hero-actions">
-            <a class="line-button large" href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener">
+            <a class="line-button large" href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener">
               <span class="line-mark" aria-hidden="true">LINE</span>
               馬上加 LINE 免費體驗
             </a>
@@ -1388,7 +1405,7 @@
           <div class="section-label">從下一句開始，彼此都聽得懂</div>
           <h2 id="cta-title">現在加 LINE，<br>免費體驗無障礙溝通。</h2>
           <p>少一次誤會，就多一份照顧的安心。馬上把「翻譯小幫手」加為 LINE 好友。</p>
-          <a class="line-button large" href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener">
+          <a class="line-button large" href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener">
             <span class="line-mark" aria-hidden="true">LINE</span>
             馬上加 LINE 好友
           </a>
@@ -1432,7 +1449,7 @@
     </div>
   </footer>
 
-  <a class="mobile-cta" href="https://lin.ee/O4hnLIk" target="_blank" rel="noopener" aria-label="馬上加 LINE 好友免費體驗">
+  <a class="mobile-cta" href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener" aria-label="馬上加 LINE 好友免費體驗">
     <span class="line-mark" aria-hidden="true">LINE</span>
     馬上加好友・免費體驗
   </a>
