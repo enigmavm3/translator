@@ -281,6 +281,17 @@ a:focus-visible { outline: 3px solid #bc7700; outline-offset: 5px; }
   border: 10px solid #10251d; border-radius: 42px; background: #10251d;
   box-shadow: 0 40px 80px rgba(21, 61, 48, .28), 0 0 0 1px rgba(21, 61, 48, .25), inset 0 0 0 1px rgba(255, 255, 255, .06);
 }
+.video-play-btn {
+  position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  width: 96px; height: 96px; padding: 0; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .85);
+  color: #fff; background: rgba(7, 31, 23, .62); box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  font: 800 14px/1.2 "Noto Sans TC", system-ui, sans-serif; letter-spacing: .06em; cursor: pointer;
+}
+.video-play-btn span { font-size: 28px; line-height: 1; margin-left: 4px; }
+.video-play-btn[hidden] { display: none; }
+.video-play-btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
 .phone-frame video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 32px; background: #e6eee8; }
 
 /* ---------- 三大主打 ---------- */
@@ -435,7 +446,7 @@ footer a { text-underline-offset: 3px; }
 <div class="actions"><a class="line-button large" href="https://lin.ee/8jfPoPm" data-position="hero" target="_blank" rel="noopener"><span class="line-mark" aria-hidden="true">LINE</span>免費加好友試用<span class="arrow" aria-hidden="true">→</span></a><span class="btn-note">加好友即可試用，不用註冊、不要個資</span></div>
 </div>
 <div class="hero-media">
-<div class="video-frame"><video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/for-agencies/agency_v1_poster.jpg" aria-label="示意影片：仲介打中文、移工打母語，翻譯小幫手在 LINE 群組自動互譯"><source src="images/for-agencies/agency_v1.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video id="hero-video" autoplay muted loop playsinline preload="auto" poster="images/for-agencies/agency_v1_poster.jpg" aria-label="示意影片：仲介打中文、移工打母語，翻譯小幫手在 LINE 群組自動互譯"><source src="images/for-agencies/agency_v1.mp4" type="video/mp4"></video></div>
 </div>
 </div></section>
 
@@ -460,7 +471,7 @@ footer a { text-underline-offset: 3px; }
 </div></section>
 
 <section class="demo"><div class="wrap demo-layout"><div class="demo-copy"><span class="section-label">對話示範</span><h2>一個 LINE 群組，<br>各自說母語</h2><p>你打中文、移工打母語，訊息自動互譯。</p></div><div class="demo-media">
-<div class="phone-frame"><video autoplay muted loop playsinline preload="metadata" poster="images/for-agencies/agent_chat_v1_poster.jpg" aria-label="示意影片：仲介打中文、移工打母語，翻譯小幫手在 LINE 群組自動互譯"><source src="images/for-agencies/agent_chat_v1.mp4" type="video/mp4"></video></div><p class="small demo-note">示意對話，實際翻譯會依對話內容略有不同。</p></div></div></section>
+<div class="phone-frame"><video autoplay muted loop playsinline preload="auto" poster="images/for-agencies/agent_chat_v1_poster.jpg" aria-label="示意影片：仲介打中文、移工打母語，翻譯小幫手在 LINE 群組自動互譯"><source src="images/for-agencies/agent_chat_v1.mp4" type="video/mp4"></video></div><p class="small demo-note">示意對話，實際翻譯會依對話內容略有不同。</p></div></div></section>
 
 <section class="features"><div class="wrap">
 <div class="section-head"><span class="section-label">WHY US</span><h2>為什麼是翻譯小幫手</h2></div>
@@ -506,15 +517,65 @@ footer a { text-underline-offset: 3px; }
 <script>
   (function () {
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // 使用者偏好減少動態時：影片不自動播放，改為手動播放（顯示控制列）。
-    if (reduce) {
-      document.querySelectorAll('video').forEach(function (v) {
-        v.removeAttribute('autoplay');
-        v.autoplay = false;
-        v.pause();
-        v.controls = true;
-      });
+    // 影片播放保險：靜音自動播放；被瀏覽器擋下（低耗電、App 內建瀏覽器等）時顯示「▶ 播放」按鈕。
+    // 影片沒有閃爍內容，減少動態偏好下照常播放（只關掉捲動進場動畫）。
+    var videos = Array.prototype.slice.call(document.querySelectorAll('video'));
+    var hasIO = 'IntersectionObserver' in window;
+    function showBtn(v) { if (v._btn) v._btn.hidden = false; }
+    function hideBtn(v) { if (v._btn) v._btn.hidden = true; }
+    function tryPlay(v, byUser) {
+      if (!byUser && !v._inView) return;
+      v.muted = true;
+      var p;
+      try { p = v.play(); } catch (err) { showBtn(v); return; }
+      if (p && typeof p.then === 'function') {
+        p.then(function () { hideBtn(v); }).catch(function (err) {
+          if (v.paused && (byUser || v._inView) && !(err && err.name === 'AbortError')) showBtn(v);
+        });
+      }
+      // 有些 App 內建瀏覽器不回報錯誤也不播放：稍後仍停著就顯示按鈕。
+      clearTimeout(v._timer);
+      v._timer = setTimeout(function () { if (v.paused && v._inView) showBtn(v); }, 2000);
     }
+    function retryAll() { videos.forEach(function (v) { if (v.paused) tryPlay(v, false); }); }
+    videos.forEach(function (v) {
+      v.muted = true;
+      v.setAttribute('muted', '');
+      v.playsInline = true;
+      v._inView = !hasIO;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'video-play-btn';
+      btn.hidden = true;
+      btn.setAttribute('aria-label', '播放影片');
+      btn.innerHTML = '<span aria-hidden="true">▶</span>播放';
+      btn.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); tryPlay(v, true); });
+      v.addEventListener('click', function () { if (v.paused) tryPlay(v, true); });
+      v.addEventListener('playing', function () { hideBtn(v); });
+      v.parentElement.appendChild(btn);
+      v._btn = btn;
+    });
+    if (hasIO) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          v._inView = e.isIntersecting;
+          if (e.isIntersecting) { tryPlay(v, false); } else { clearTimeout(v._timer); v.pause(); }
+        });
+      }, {threshold: 0.25});
+      videos.forEach(function (v) { vio.observe(v); });
+    } else {
+      videos.forEach(function (v) { tryPlay(v, false); });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', retryAll);
+    else retryAll();
+    document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') retryAll(); });
+    ['touchstart', 'scroll'].forEach(function (type) {
+      window.addEventListener(type, function once() {
+        window.removeEventListener(type, once, {passive: true});
+        retryAll();
+      }, {passive: true});
+    });
     // 捲動進場：預設顯示內容，僅在支援且允許動態時啟用。
     if ('IntersectionObserver' in window && !reduce) {
       var observer = new IntersectionObserver(function (entries) {
