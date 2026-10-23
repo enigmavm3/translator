@@ -221,7 +221,7 @@ footer .copy {
         <li><strong>群組資訊：</strong>群組 ID、群組名稱。用於管理翻譯服務及訂閱綁定。</li>
         <li><strong>語言偏好設定：</strong>您在群組中選擇的語言。用於提供正確的翻譯方向。</li>
         <li><strong>翻譯使用紀錄：</strong>翻譯的語言組合、訊息類型（文字或語音）、使用時間、token 用量。用於用量統計與計費。</li>
-        <li><strong>訂閱與付款紀錄：</strong>訂閱方案、訂單編號、付款狀態。用於訂閱管理與計費。</li>
+        <li><strong>訂閱與付款紀錄：</strong>訂閱方案、訂單編號、付款管道、付款狀態。用於訂閱管理與計費。</li>
       </ul>
       <div class="note">
         <strong>關於訊息內容</strong>
@@ -255,6 +255,8 @@ footer .copy {
         <li><strong>Anthropic Claude API：</strong>用於文字翻譯處理。訊息內容傳送至 Anthropic 伺服器進行翻譯，翻譯完成後不由 Anthropic 儲存。</li>
         <li><strong>OpenAI Whisper API：</strong>用於語音轉文字處理（進階及商用方案）。語音資料傳送至 OpenAI 伺服器進行辨識，辨識完成後不由本服務端儲存音檔。</li>
         <li><strong>LINE Pay：</strong>用於處理訂閱付款。付款資料（如信用卡資訊）由 LINE Pay 直接處理，本公司不經手亦不儲存任何信用卡或支付資訊。</li>
+        <li><strong>藍新金流（藍新科技股份有限公司）：</strong>用於處理信用卡、行動支付、ATM 與超商繳費。付款資料由藍新金流直接處理，本公司不經手亦不儲存任何信用卡或支付資訊；ATM／超商繳費僅由本公司保存繳費代碼與繳費狀態。</li>
+        <li><strong>綠界科技（電子發票）：</strong>付款成功後用於開立電子發票，傳送發票所需的 Email、手機條碼或統一編號。</li>
       </ul>
     </div>
   </section>
