@@ -79,31 +79,15 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 ]}
 </script>
 <script>
-  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee)
+  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee / liff.line.me)
   document.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"]') : null;
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"], a[href*="liff.line.me"]') : null;
     if (a && typeof gtag === 'function') {
       gtag('event', 'conversion', {'send_to': 'AW-18387420345/MrKQCIS7g-YcELmJ579E'});
     }
   }, true);
 </script>
-  <script>
-    // 來源歸因：Google Ads 點擊（gclid/gad_source/gbraid/wbraid）進站時，把 LINE 加好友連結換成「Google廣告」管道連結；
-    // 旗標存 sessionStorage，站內換頁後仍維持。其餘訪客用「官網」管道連結。
-    (function () {
-      try {
-        var q = location.search;
-        if (/[?&](gclid|gad_source|gbraid|wbraid)=/.test(q)) sessionStorage.setItem('src', 'gads');
-        if (sessionStorage.getItem('src') === 'gads') {
-          var fix = function () {
-            var links = document.querySelectorAll('a[href*="lin.ee/vX3Iv8U"]');
-            for (var i = 0; i < links.length; i++) links[i].href = 'https://lin.ee/waihMSZ';
-          };
-          if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
-        }
-      } catch (err) {}
-    })();
-  </script>
+  <script src="cta-ab.js"></script>
 </head>
 <body>
 <article style="background:#fbf7ea;color:#0a0a08;font-family:'Noto Serif TC', serif;line-height:1.7">

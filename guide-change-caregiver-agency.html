@@ -138,31 +138,15 @@ a:focus-visible { outline:3px solid #c4963c; outline-offset:5px; }
 @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} }
 </style>
 <script>
-  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee)
+  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee / liff.line.me)
   document.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"]') : null;
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"], a[href*="liff.line.me"]') : null;
     if (a && typeof gtag === 'function') {
       gtag('event', 'conversion', {'send_to': 'AW-18387420345/MrKQCIS7g-YcELmJ579E'});
     }
   }, true);
 </script>
-  <script>
-    // 來源歸因：Google Ads 點擊（gclid/gad_source/gbraid/wbraid）進站時，把 LINE 加好友連結換成「Google廣告」管道連結；
-    // 旗標存 sessionStorage，站內換頁後仍維持。其餘訪客用「官網」管道連結。
-    (function () {
-      try {
-        var q = location.search;
-        if (/[?&](gclid|gad_source|gbraid|wbraid)=/.test(q)) sessionStorage.setItem('src', 'gads');
-        if (sessionStorage.getItem('src') === 'gads') {
-          var fix = function () {
-            var links = document.querySelectorAll('a[href*="lin.ee/vX3Iv8U"]');
-            for (var i = 0; i < links.length; i++) links[i].href = 'https://lin.ee/waihMSZ';
-          };
-          if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
-        }
-      } catch (err) {}
-    })();
-  </script>
+  <script src="cta-ab.js"></script>
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "更換外籍看護與仲介：家庭雇主指南（2026）", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-09-28", "dateModified": "2026-09-29", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/guide-change-caregiver-agency.html"}, "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://triplehai.com/translator/"}, {"@type": "ListItem", "position": 2, "name": "聘僱外籍看護完整指南", "item": "https://triplehai.com/translator/guide-hire-foreign-caregiver.html"}, {"@type": "ListItem", "position": 3, "name": "更換外籍看護與仲介", "item": "https://triplehai.com/translator/guide-change-caregiver-agency.html"}]}</script>
