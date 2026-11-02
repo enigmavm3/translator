@@ -12,10 +12,10 @@
   gtag("config", "AW-18387420345");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINE 群組翻譯怎麼用？翻譯機器人、Google 翻譯、ChatGPT 完整比較與教學｜翻譯小幫手</title>
-<meta name="description" content="想在 LINE 群組即時翻譯？本篇比較 3 種常見做法——切 App 翻譯（Google 翻譯、ChatGPT）、其他 LINE 群組翻譯機器人、翻譯小幫手——並教你 30 秒把翻譯機器人加入 LINE 群組，中文自動翻成印尼語、越南語、泰語、菲律賓語、英文。">
-<meta property="og:title" content="LINE 群組翻譯怎麼用？3 種做法完整比較與 30 秒設定教學">
-<meta property="og:description" content="切 App 翻譯（Google 翻譯、ChatGPT）、其他群組翻譯機器人、翻譯小幫手——哪種適合你？含 30 秒設定教學。">
+<title>LINE 群組翻譯機器人怎麼用？3 步加入群組＋不翻譯排查｜翻譯小幫手</title>
+<meta name="description" content="把翻譯小幫手加進 LINE 群組，你打中文，外籍看護或移工看到印尼文、越南文等母語；對方用母語回，你看到中文。3 步驟設定、可直接複製的群組訊息範例，以及群組不翻譯時的 7 項檢查。">
+<meta property="og:title" content="LINE 群組翻譯機器人怎麼用？3 步加入群組＋不翻譯排查">
+<meta property="og:description" content="你打中文，看護看到印尼文、越南文；對方回母語，你看到中文。3 步驟設定、群組訊息範例、不翻譯時的檢查清單。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://triplehai.com/translator/line-translation-guide.html">
 <link rel="canonical" href="https://triplehai.com/translator/line-translation-guide.html">
@@ -27,8 +27,8 @@
 <meta property="og:image:width" content="1672">
 <meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LINE 群組翻譯怎麼用？3 種做法完整比較與 30 秒設定教學">
-<meta name="twitter:description" content="切 App 翻譯（Google 翻譯、ChatGPT）、其他群組翻譯機器人、翻譯小幫手——哪種適合你？">
+<meta name="twitter:title" content="LINE 群組翻譯機器人怎麼用？3 步加入群組＋不翻譯排查">
+<meta name="twitter:description" content="3 步驟把翻譯機器人加進 LINE 群組，附群組訊息範例與不翻譯時的檢查清單。">
 <meta name="twitter:image" content="https://triplehai.com/translator/images/after.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,6 +59,17 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 .tip-box { background:#f4eed9; border-left:4px solid #c4963c; padding:24px 28px; margin:32px 0; font-family:"Noto Sans TC", system-ui, sans-serif; }
 .tip-box h3 { font-size:16px; font-weight:700; margin:0 0 8px; color:#0a0a08; }
 .tip-box p { font-size:17px; line-height:1.8; color:#3a3830; margin:0; }
+.purpose-box { background:#ffffff; border:2px solid #1a5c3f; padding:28px 32px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.purpose-box h2 { font-family:"Noto Serif TC", serif; font-size:24px; font-weight:700; margin:0 0 14px; color:#1a5c3f; }
+.purpose-box ul { margin:0 0 14px; padding-left:22px; }
+.purpose-box li { font-size:18px; line-height:1.8; color:#3a3830; margin-bottom:8px; }
+.purpose-box li a { color:#1a5c3f; font-size:16px; white-space:nowrap; }
+.purpose-box p { font-size:17px; line-height:1.8; color:#3a3830; margin:0; }
+.msg-box { background:#ffffff; border-left:4px solid #c4963c; padding:20px 24px; margin-bottom:14px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.msg-box .msg-label { font-size:14px; font-weight:700; color:#1a5c3f; margin-bottom:8px; }
+.msg-box .msg-text { font-size:19px; line-height:1.8; color:#0a0a08; user-select:all; -webkit-user-select:all; }
+.msg-box .msg-note { font-size:15px; line-height:1.8; color:#3a3830; margin-top:10px; font-style:italic; }
+.step-box code { background:#f4eed9; padding:2px 6px; font-size:16px; }
 @media (max-width: 768px) {
   .rwd-inner { padding:0 20px !important; }
   .rwd-footer { grid-template-columns:1fr 1fr !important; gap:24px !important; }
@@ -73,14 +84,15 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "LINE 群組翻譯怎麼用？翻譯機器人、Google 翻譯、ChatGPT 完整比較與教學", "description": "比較 3 種在 LINE 群組翻譯的做法，並教你 30 秒把翻譯機器人加入 LINE 群組，中文自動翻成印尼語、越南語、泰語、菲律賓語、英文。", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-07-02", "dateModified": "2026-09-15", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/line-translation-guide.html"}, "image": "https://triplehai.com/translator/images/after.png", "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
+{"@context": "https://schema.org", "@type": "Article", "headline": "LINE 群組翻譯機器人怎麼用？3 步加入群組＋不翻譯排查", "description": "3 步驟把翻譯小幫手加進 LINE 群組，中文自動翻成印尼語、越南語、泰語、菲律賓語、英文；附可直接複製的群組訊息範例，以及群組不翻譯時的 7 項檢查。", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-07-02", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/line-translation-guide.html"}, "image": "https://triplehai.com/translator/images/after.png", "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://triplehai.com/translator/line-translation-guide.html#faq", "mainEntity": [
   {"@type": "Question", "name": "翻譯機器人要加進現有的 LINE 群組，還是要開新群組？", "acceptedAnswer": {"@type": "Answer", "text": "兩種都可以。你可以直接把翻譯小幫手邀請進你和看護、移工既有的 LINE 群組；也可以開一個新群組，把家人、看護和翻譯小幫手一起拉進來。加入後翻譯立即生效，不需要額外設定；建議雙方先各傳一句完整的母語訊息，讓系統認得彼此的語言。"}},
   {"@type": "Question", "name": "對方（看護／移工）需要安裝或設定什麼嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。翻譯會自動出現在群組對話裡，對方只要會用 LINE 傳訊息就能使用，不用下載新 App、不用註冊帳號、也不用改任何設定。"}},
   {"@type": "Question", "name": "LINE 群組翻譯機器人是免費的嗎？", "acceptedAnswer": {"@type": "Answer", "text": "翻譯小幫手每個 LINE 群組終身共 50 則免費翻譯（不會每日或每月重置），覺得好用再升級。付費方案可用 LINE Pay、信用卡、ATM 或超商繳費單次購買 30 天，基本方案 NT$299 起，不自動扣款，有需要再續購即可。"}},
-  {"@type": "Question", "name": "翻譯小幫手跟其他 LINE 群組翻譯機器人有什麼不同？", "acceptedAnswer": {"@type": "Answer", "text": "多數群組翻譯機器人需要先註冊綁定帳號、進後台設定語言，可翻譯的則數也常常不透明；而且翻譯引擎多為通用詞庫，沒有針對家庭照顧場景校正，排班、藥袋、量血壓這類用詞容易翻錯。翻譯小幫手零下載、零設定、零註冊，加入群組就能用，方案額度清楚標示，並針對台灣照護現場用詞調校過翻譯品質。"}}
+  {"@type": "Question", "name": "LINE 群組翻譯沒反應、不翻譯怎麼辦？", "acceptedAnswer": {"@type": "Answer", "text": "先確認翻譯小幫手真的在群組成員清單裡（只加好友不夠，LINE 社群 OpenChat 也無法加入機器人）；再請對方用母語傳一句完整的句子，貼圖、照片和單一表情不會翻譯。如果有人輸入過 /stop，在群組輸入 /start 即可恢復；輸入 /plan 可以查看這個群組的方案與用量。"}},
+  {"@type": "Question", "name": "翻譯小幫手有哪些特點？", "acceptedAnswer": {"@type": "Answer", "text": "翻譯小幫手只做 LINE 群組翻譯：加入群組就能用，不用下載、不用註冊，語言會從雙方傳的訊息自動認得；支援繁體中文、印尼語、越南語、泰語、菲律賓語、英文，並針對台灣照護現場常用的詞（排班、量血壓、藥袋、加班費）做過調校。方案額度清楚標示，每個群組先有 50 則免費翻譯。"}}
 ]}
 </script>
 <script type="application/ld+json">
@@ -119,85 +131,54 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <header style="border-bottom:1px solid #0a0a08;padding:20px 0 16px;font-family:'Noto Serif TC', serif;border-top:6px solid #1a5c3f"><div style="max-width:1120px;margin:0 auto;padding:0 40px;text-align:center"><a href="./" style="text-decoration:none"><div style="font-family:'Noto Serif TC', serif;font-size:32px;font-weight:900;letter-spacing:0.1em;color:#0a0a08">翻譯小幫手</div></a><div style="margin-top:8px;border-top:2px double #0a0a08;width:120px;margin:10px auto 0"></div></div></header>
 
 <!-- Hero -->
-<section style="max-width:1000px;margin:0 auto;padding:80px 40px 64px;text-align:center">
+<section style="max-width:1000px;margin:0 auto;padding:80px 40px 48px;text-align:center">
 <div style="display:inline-block;background:#1a5c3f;color:#ffffff;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.25em;padding:6px 16px;margin-bottom:32px;font-weight:600">使 用 教 學</div>
-<h1 style="font-size:clamp(36px, 5.5vw, 58px);line-height:1.2;font-weight:700;letter-spacing:-0.01em;margin-bottom:24px;color:#0a0a08">LINE 群組翻譯完整指南：<br/>讓每句話自動變成對方的母語</h1>
-<p style="font-size:22px;color:#3a3830;max-width:640px;margin:0 auto 16px;line-height:1.85">切 App 翻譯、其他翻譯機器人、翻譯小幫手——<br/>3 種做法完整比較，30 秒完成設定。</p>
-<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#3a3830;letter-spacing:0.08em;margin-top:8px">最後更新 2026 年 8 月</div>
+<h1 style="font-size:clamp(36px, 5.5vw, 58px);line-height:1.2;font-weight:700;letter-spacing:-0.01em;margin-bottom:24px;color:#0a0a08">LINE 群組翻譯機器人教學：<br/>3 步加入群組，各打各的母語</h1>
+<p style="font-size:22px;color:#3a3830;max-width:660px;margin:0 auto 16px;line-height:1.85">你打中文，外籍看護或移工看到印尼文、越南文；<br/>對方用母語回覆，你直接看到中文。</p>
+<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#3a3830;letter-spacing:0.08em;margin-top:8px">最後更新 2026 年 11 月</div>
 </section>
 
-<!-- 為什麼需要 -->
-<section style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
-<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
-<div class="section-label">為 什 麼 需 要</div>
-<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">語言不通的 LINE 對話，是什麼樣子？</h2>
-<p class="section-text">台灣人的日常溝通幾乎都在 LINE 上——家裡的外籍看護、工廠的移工夥伴、店裡的外籍員工。但語言不通時，常見的畫面是：打一句話、全選複製、切到翻譯 App、貼上、翻譯、複製結果、切回 LINE、貼給對方。一句話要八個步驟，對話的節奏完全斷掉。</p>
-<p class="section-text">更常發生的是：對方「已讀」了，也點頭說好，但其實沒有讀懂。用藥指令聽錯、排班聽成解僱、緊急狀況說不清楚——這些都是真實發生過的事。所以「LINE 群組翻譯」的重點不只是把字翻出來，而是<strong>用你最熟悉的語言，說出你想要的，並且直接送出</strong>——翻譯自動出現在對話裡，雙方都不用多做任何一步。不僅保留原意，溝通更準確、更有效率。</p>
-</div>
-</section>
-
-<!-- 3 種做法比較 -->
-<section style="padding:72px 0;max-width:900px;margin:0 auto">
+<!-- 這篇幫你做什麼 -->
+<section style="max-width:900px;margin:0 auto;padding:0 0 64px">
 <div style="padding:0 40px" class="rwd-inner">
-<div class="section-label">方 法 比 較</div>
-<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">在 LINE 翻譯的 3 種做法，哪種適合你？</h2>
-
-<div class="compare-wrap">
-<table class="compare">
-<thead>
-<tr><th>做法</th><th>雙向自動翻譯</th><th>設定門檻</th><th>家庭照顧詞庫調校</th><th>適合情境</th></tr>
-</thead>
-<tbody>
-<tr><td>傳統切 App（Google 翻譯、ChatGPT）</td><td class="no">✕ 全手動複製貼上</td><td>免設定，但每句都要切換 App</td><td class="no">✕ 通用詞庫，照護用詞常出錯</td><td>偶爾翻一句</td></tr>
-<tr><td>其他 LINE 群組翻譯機器人</td><td class="yes">✓ 群組內自動</td><td class="no">✕ 要綁定帳號、設定繁瑣</td><td class="no">✕ 未經校正，可翻譯量不透明</td><td>—</td></tr>
-<tr><td>翻譯小幫手</td><td class="yes">✓ 全自動雙向</td><td class="yes">零下載、零設定、零註冊</td><td class="yes">✓ 針對台灣照護現場調校</td><td>與看護、移工長期溝通</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="method-card">
-<h3>做法一：傳統切 App 翻譯（Google 翻譯、ChatGPT）</h3>
-<p>最多人用、也最累的做法。不管是 Google 翻譯還是 ChatGPT，每一句都要在 LINE 和翻譯 App 之間來回切換：全選複製、切過去貼上、翻譯、再複製回來傳送。長輩幾乎都卡在「複製」這一步；而且對方回的訊息，你還得再貼回去翻一次。適合偶爾翻一句，不適合每天要溝通的對象。</p>
-</div>
-<div class="method-card">
-<h3>做法二：其他 LINE 群組翻譯機器人</h3>
-<p>市面上也有其他能加入 LINE 群組的翻譯機器人，但多數要先註冊綁定帳號、進後台做語言設定，還沒開始用就先卡關；可翻譯的則數也常常不透明，用到一半才發現額度沒了。更關鍵的是，翻譯引擎多為通用詞庫，沒有針對家庭照顧場景校正——「排班」、「藥袋」、「量血壓」這類每天都要用的詞，反而容易翻錯。</p>
-</div>
-<div class="method-card best">
-<h3>做法三：翻譯小幫手</h3>
-<p>把翻譯小幫手當成一位群組成員邀請進來，之後所有訊息自動雙向翻譯：你打中文，對方看到印尼語、越南語、泰語、菲律賓語或英文；對方用母語回覆，你直接看到中文。零下載、零設定、零註冊，對方也不需要安裝任何東西。翻譯小幫手針對台灣照護現場的用詞（排班、量血壓、藥袋、加班費）做過調校，翻譯品質是同類工具中最佳。</p>
-</div>
-
-<div class="tip-box">
-<h3>小結</h3>
-<p>如果只是偶爾翻一句，切 App 還能應付；但如果是每天都要溝通的看護或移工，群組翻譯機器人最省力——挑選時注意三件事：設定門檻高不高、翻譯量透不透明、詞庫有沒有針對照顧場景校正。翻譯小幫手三點都做到，加入群組就能用。</p>
+<div class="purpose-box">
+<h2>這篇教學能幫你做什麼</h2>
+<ul>
+<li><strong>把翻譯機器人加進 LINE 群組</strong>：家人、外籍看護（或移工）和翻譯小幫手在同一個群組，雙方各打各的母語，翻譯自動出現在對話裡。<a href="#setup">看 3 步驟 ↓</a></li>
+<li><strong>第一次在群組裡該傳什麼</strong>：可以直接複製的開場、交辦、確認訊息。<a href="#messages">看訊息範例 ↓</a></li>
+<li><strong>群組不翻譯時怎麼檢查</strong>：7 個最常見的原因與解法。<a href="#troubleshooting">看排查 ↓</a></li>
+</ul>
+<p>支援繁體中文、印尼語、越南語、泰語、菲律賓語、英文。對方不用下載 App、不用註冊，只要會用 LINE 傳訊息就好。</p>
 </div>
 </div>
 </section>
-
-<section style="padding:40px 0;background:#faf5ee;border-top:1px solid #dac7c3"><div class="rwd-inner" style="max-width:900px;margin:0 auto;padding:0 40px"><h2 style="font-size:28px;line-height:1.5">和不同語言的伴侶、朋友，也能在群組聊天</h2><p class="section-text">如果你想和海外伴侶或朋友用各自的語言交流，可以從<a href="https://triplehai.com/love/">跨國 LINE 翻譯</a>了解使用情境。兩位使用者加上小幫手就能建立翻譯群組；完整步驟、語言支援與額度問題，整理在<a href="https://triplehai.com/love/guide.html">跨國 LINE 翻譯教學與 FAQ</a>。</p></div></section>
 
 <!-- 教學 -->
 <section id="setup" style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
 <div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
 <div class="section-label">設 定 教 學</div>
-<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">30 秒把翻譯機器人加入 LINE 群組</h2>
-<p class="section-text">以翻譯小幫手為例，全程在 LINE 裡完成，不用下載任何東西：</p>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">3 步把翻譯機器人加入 LINE 群組</h2>
+<p class="section-text">全程在 LINE 裡完成，不用下載任何東西。以下用手機版 LINE 說明：</p>
 
 <div class="step-box">
 <div class="num">STEP 01</div>
-<h3>加入 LINE 好友</h3>
-<p>用手機點「加入 LINE 好友」按鈕，或用 LINE 掃描下方 QR Code，把翻譯小幫手加為好友。</p>
+<h3>加翻譯小幫手為 LINE 好友</h3>
+<p>用手機點下方「加入 LINE 好友」按鈕，或用 LINE 掃描 QR Code。加好友後，翻譯小幫手會在一對一聊天裡傳一則歡迎訊息和使用說明——這裡是管理方案的地方，<strong>群組翻譯要在下一步的群組裡用</strong>。</p>
 </div>
 <div class="step-box">
 <div class="num">STEP 02</div>
-<h3>邀請進你們的群組</h3>
-<p>打開你和看護／移工的 LINE 群組，點右上角選單 →「邀請」→ 選擇「翻譯小幫手」。還沒有群組的話，開一個新群組，把家人、看護和翻譯小幫手一起拉進來。</p>
+<h3>邀請進你和看護的群組</h3>
+<p>打開你和看護／移工的 LINE 群組 → 點右上角的選單（≡）→「邀請」→ 在好友清單找到「翻譯小幫手」→ 勾選後按「邀請」。還沒有群組的話，先建立一個新群組，把家人、看護和翻譯小幫手一起拉進來。完成後，群組成員清單裡會看到「翻譯小幫手」，它也會在群組裡發一則歡迎訊息。</p>
 </div>
 <div class="step-box">
 <div class="num">STEP 03</div>
-<h3>直接開始對話</h3>
-<p>照常打中文，對方的母語翻譯會自動出現在訊息下方；記得請對方也傳一句完整的母語訊息，系統就會自動認得雙方語言。對方用印尼語、越南語、泰語、菲律賓語或英文回覆，你也會直接看到中文。每個群組終身共 50 則免費翻譯（不會每日或每月重置），覺得好用再升級。</p>
+<h3>雙方各傳一句完整的母語訊息</h3>
+<p>你照常打中文，再請對方用自己的語言回一句完整的句子（例如印尼文、越南文）。系統會從雙方的訊息自動認得語言，之後每則訊息的譯文都會出現在對話裡：你看到中文，對方看到自己的母語。不用設定語言、不用輸入指令。每個群組終身共 50 則免費翻譯（不會每日或每月重置），覺得好用再升級。</p>
+</div>
+
+<div class="tip-box">
+<h3>想先準備一些常用句？</h3>
+<p>用藥、翻身、排休、回診的中文說法，整理在<a href="phrases.html" style="color:#1a5c3f">印尼看護常用中文 50 句</a>和<a href="phrases-vi.html" style="color:#1a5c3f">越南看護常用中文 50 句</a>，每句附對照翻譯，也可以列印貼在冰箱上。</p>
 </div>
 
 <div style="text-align:center;margin-top:48px">
@@ -210,6 +191,135 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 </div>
 </div>
 </section>
+
+<!-- 可直接複製的群組訊息 -->
+<section id="messages" style="padding:72px 0;max-width:900px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="section-label">訊 息 範 例</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">加入後第一次在群組裡傳什麼？可直接複製</h2>
+<p class="section-text">下面的訊息用中文打就好，翻譯小幫手會自動翻成對方的語言。長按文字即可複製，貼到你們的群組裡。</p>
+
+<div class="msg-box">
+<div class="msg-label">① 開場：告訴對方群組裡多了翻譯</div>
+<div class="msg-text">大家好，我把翻譯小幫手加進群組了。之後妳用自己的語言打字就可以，我會看到中文；我打中文，妳也會看到妳的語言。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">② 請對方回一句完整的母語（讓系統認得語言）</div>
+<div class="msg-text">可以先用妳的語言回我一句話嗎？例如跟大家打個招呼、說說今天過得怎麼樣。</div>
+<div class="msg-note">對方可能會回：<br/>印尼文：Halo semuanya, hari ini saya baik-baik saja. Terima kasih.<br/>越南文：Chào cả nhà, hôm nay em vẫn ổn. Cảm ơn ạ.</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">③ 交辦事情：時間、地點、要帶什麼寫清楚</div>
+<div class="msg-text">明天早上 9 點 30 分阿公要回診，8 點 45 分出門。請幫忙準備健保卡、藥袋和血壓紀錄本。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">④ 確認對方真的懂了</div>
+<div class="msg-text">這件事很重要，看完請用妳自己的話再說一次給我聽，有不懂的地方直接問我。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">⑤ 請對方回報</div>
+<div class="msg-text">做完了跟我說一聲，量完血壓請把數字傳到群組。</div>
+</div>
+
+<p class="section-text" style="margin-top:28px">想看一整段「家屬交辦 → 看護確認 → 回報」的群組對話怎麼跑，可以參考兩個示範情境：<a href="case-medication.html" style="color:#1a5c3f">回診前一天交代用藥與準備（印尼文）</a>、<a href="case-emergency.html" style="color:#1a5c3f">長輩夜間不舒服的回報（越南文）</a>。</p>
+</div>
+</section>
+
+<!-- 疑難排解 -->
+<section id="troubleshooting" style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
+<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
+<div class="section-label">疑 難 排 解</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">LINE 群組不翻譯怎麼辦？照這 7 項檢查</h2>
+<p class="section-text">大多數「機器人沒反應」的狀況，都能在前三項找到原因：</p>
+
+<div class="step-box">
+<div class="num">檢查 01</div>
+<h3>翻譯小幫手真的在群組裡嗎？</h3>
+<p>打開群組的成員清單，要看得到「翻譯小幫手」才算完成——只加了好友、還沒邀請進群組，是最常見的原因。另外，LINE 社群（OpenChat）無法邀請機器人，要用一般 LINE 群組。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 02</div>
+<h3>群組裡已經有「另一種語言」的人開口了嗎？</h3>
+<p>翻譯小幫手要知道群組裡有兩種語言，才會開始互相翻譯。如果目前只有你在打中文，它會先問你想翻成什麼語言——可以直接點選對方的語言，或請對方用母語傳一句<strong>完整的句子</strong>。只回「OK」「好」或一個字，系統可能還認不出來。也可以直接打「翻成印尼文」，或在它問你時回「印尼文」。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 03</div>
+<h3>傳的是貼圖、照片或表情符號嗎？</h3>
+<p>貼圖、照片和單一表情符號不會翻譯；照片裡的文字（例如藥袋、診斷單）也不會翻。重要內容請直接打字。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 04</div>
+<h3>翻譯是不是被暫停了？</h3>
+<p>如果有人在群組輸入過 <code>/stop</code>，翻譯會暫停；在群組輸入 <code>/start</code> 即可恢復。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 05</div>
+<h3>免費額度用完了嗎？</h3>
+<p>每個群組終身共 50 則免費翻譯（不會每日或每月重置，把翻譯小幫手移出群組再邀回來也不會重置）。在群組輸入 <code>/plan</code> 可以查看這個群組的方案與用量；也可以在和翻譯小幫手的一對一聊天點「我的群組」查看。額度用完可參考<a href="pricing.html#pricing" style="color:#1a5c3f">方案與價格</a>。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 06</div>
+<h3>多翻了一種不需要的語言，或語言認錯了？</h3>
+<p>例如有成員偶爾打英文，之後每句都多一行英文翻譯：直接在群組裡打「不要英文」或「只要印尼文」（請用中文、單獨打一句），想改回來就打「恢復英文」。如果是你自己的語言被認錯，在群組輸入 <code>/lang</code>，從選單選你的母語。</p>
+</div>
+<div class="step-box">
+<div class="num">檢查 07</div>
+<h3>語音訊息沒有翻譯？</h3>
+<p>免費體驗和進階、商用方案都能翻譯群組裡的語音訊息，只有基本方案不含語音翻譯。群組裡單段語音最長 5 分鐘（一對一試用是 2 分鐘）。語音會先轉成文字再翻譯，口音、台語或環境吵雜時可能聽錯，用藥、醫囑等重要內容請再跟醫護人員確認。</p>
+</div>
+<div class="step-box">
+<div class="num">還是不行？</div>
+<h3>寫信給我們</h3>
+<p>來信 <a href="mailto:contact@triplehai.com" style="color:#1a5c3f">contact@triplehai.com</a>，說明發生時間、群組名稱與操作步驟，我們會盡快幫你查。</p>
+</div>
+</div>
+</section>
+
+<!-- 為什麼需要 -->
+<section style="padding:72px 0;max-width:900px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="section-label">為 什 麼 需 要</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">語言不通的 LINE 對話，是什麼樣子？</h2>
+<p class="section-text">台灣人的日常溝通幾乎都在 LINE 上——家裡的外籍看護、工廠的移工夥伴、店裡的外籍員工。但語言不通時，常見的畫面是：打一句話、全選複製、切到翻譯 App、貼上、翻譯、複製結果、切回 LINE、貼給對方。一句話要八個步驟，對話的節奏完全斷掉。</p>
+<p class="section-text">更常發生的是：對方「已讀」了，也點頭說好，但其實沒有讀懂。用藥時間聽錯、把排休誤會成被解僱、緊急狀況說不清楚，都是語言不通時常見的誤會。所以「LINE 群組翻譯」的重點不只是把字翻出來，而是<strong>用你最熟悉的語言，說出你想要的，並且直接送出</strong>——翻譯自動出現在對話裡，雙方都不用多做任何一步。</p>
+</div>
+</section>
+
+<!-- 3 種做法比較 -->
+<section style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
+<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
+<div class="section-label">方 法 比 較</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">在 LINE 翻譯的 3 種做法，哪種適合你？</h2>
+
+<div class="compare-wrap">
+<table class="compare">
+<thead>
+<tr><th>做法</th><th>雙向自動翻譯</th><th>設定門檻</th><th>照護用詞</th><th>適合情境</th></tr>
+</thead>
+<tbody>
+<tr><td>切 App（Google 翻譯、ChatGPT）</td><td class="no">✕ 每句手動複製貼上</td><td>免設定，但每句都要切換 App</td><td>通用翻譯，需自行留意用詞</td><td>偶爾翻一句</td></tr>
+<tr><td>其他 LINE 群組翻譯機器人</td><td class="yes">✓ 群組內自動</td><td>依各家而定，有的需要先註冊或設定語言</td><td>依各家而定</td><td>建議實際試用比較</td></tr>
+<tr><td>翻譯小幫手</td><td class="yes">✓ 群組內自動雙向</td><td class="yes">零下載、零設定、零註冊</td><td class="yes">✓ 針對台灣照護現場用詞調校</td><td>與看護、移工長期溝通</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="method-card">
+<h3>做法一：切 App 翻譯（Google 翻譯、ChatGPT）</h3>
+<p>最多人用、也最累的做法。每一句都要在 LINE 和翻譯 App 之間來回切換：全選複製、切過去貼上、翻譯、再複製回來傳送。長輩常卡在「複製」這一步；對方回的訊息，你還得再貼回去翻一次。適合偶爾翻一句，不適合每天要溝通的對象。</p>
+</div>
+<div class="method-card">
+<h3>做法二：其他 LINE 群組翻譯機器人</h3>
+<p>市面上也有其他能加入 LINE 群組的翻譯機器人，功能、設定方式和計費各家不同。挑選時可以實際試用，留意三件事：要不要先註冊或設定語言、免費和付費額度寫得清不清楚、照護常用詞（排班、藥袋、量血壓）翻得對不對。</p>
+</div>
+<div class="method-card best">
+<h3>做法三：翻譯小幫手</h3>
+<p>把翻譯小幫手當成一位群組成員邀請進來，之後訊息自動雙向翻譯：你打中文，對方看到印尼語、越南語、泰語、菲律賓語或英文；對方用母語回覆，你直接看到中文。零下載、零設定、零註冊，對方也不需要安裝任何東西。翻譯小幫手針對台灣照護現場的用詞（排班、量血壓、藥袋、加班費）做過調校，方案額度清楚標示。</p>
+</div>
+</div>
+</section>
+
+<section style="padding:40px 0;background:#faf5ee;border-top:1px solid #dac7c3"><div class="rwd-inner" style="max-width:900px;margin:0 auto;padding:0 40px"><h2 style="font-size:28px;line-height:1.5">和不同語言的伴侶、朋友，也能在群組聊天</h2><p class="section-text">如果你想和海外伴侶或朋友用各自的語言交流，可以從<a href="https://triplehai.com/love/">跨國 LINE 翻譯</a>了解使用情境。兩位使用者加上小幫手就能建立翻譯群組；完整步驟、語言支援與額度問題，整理在<a href="https://triplehai.com/love/guide.html">跨國 LINE 翻譯教學與 FAQ</a>。</p></div></section>
 
 <!-- FAQ -->
 <section style="padding:72px 0;max-width:900px;margin:0 auto">
@@ -229,39 +339,13 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <h3>LINE 群組翻譯機器人是免費的嗎？</h3>
 <p>翻譯小幫手每個 LINE 群組終身共 50 則免費翻譯（不會每日或每月重置），覺得好用再升級。付費方案可用 LINE Pay、信用卡、ATM 或超商繳費單次購買 30 天，基本方案 NT$299 起，不自動扣款，有需要再續購即可。詳細方案請見<a href="pricing.html#pricing" style="color:#1a5c3f">方案與價格</a>。</p>
 </div>
+<div class="faq-item">
+<h3>LINE 群組翻譯沒反應、不翻譯怎麼辦？</h3>
+<p>先確認翻譯小幫手真的在群組成員清單裡（只加好友不夠，LINE 社群 OpenChat 也無法加入機器人）；再請對方用母語傳一句完整的句子，貼圖、照片和單一表情不會翻譯。如果有人輸入過 /stop，在群組輸入 /start 即可恢復；輸入 /plan 可以查看這個群組的方案與用量。完整步驟見上方<a href="#troubleshooting" style="color:#1a5c3f">7 項檢查</a>。</p>
+</div>
 <div class="faq-item" style="border-bottom:none">
-<h3>翻譯小幫手跟其他 LINE 群組翻譯機器人有什麼不同？</h3>
-<p>多數群組翻譯機器人需要先註冊綁定帳號、進後台設定語言，可翻譯的則數也常常不透明；而且翻譯引擎多為通用詞庫，沒有針對家庭照顧場景校正，排班、藥袋、量血壓這類用詞容易翻錯。翻譯小幫手零下載、零設定、零註冊，加入群組就能用，方案額度清楚標示，並針對台灣照護現場用詞調校過翻譯品質。</p>
-</div>
-</div>
-</section>
-
-<!-- 疑難排解 -->
-<section id="troubleshooting" style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
-<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
-<div class="section-label">疑 難 排 解</div>
-<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">LINE 翻譯機器人沒反應？照這 4 步檢查</h2>
-<p class="section-text">大多數「沒有翻譯」的狀況，都能在前兩步找到原因：</p>
-
-<div class="step-box">
-<div class="num">檢查 01</div>
-<h3>確認翻譯小幫手真的在群組裡</h3>
-<p>打開群組的成員清單，要看得到「翻譯小幫手」才算完成——只加了好友、還沒邀請進群組，是最常見的原因。另外提醒：LINE 社群（OpenChat）無法邀請機器人，要用一般 LINE 群組。</p>
-</div>
-<div class="step-box">
-<div class="num">檢查 02</div>
-<h3>雙方各傳一句完整的母語文字</h3>
-<p>你先打一句中文，再請對方傳一句完整的母語訊息，讓系統認得雙方語言。貼圖、照片或單一表情符號無法用來辨識語言。</p>
-</div>
-<div class="step-box">
-<div class="num">檢查 03</div>
-<h3>看看免費額度是否用完</h3>
-<p>每個群組終身共 50 則免費翻譯（不會每日或每月重置）。在與翻譯小幫手的一對一聊天裡，可以查看群組的額度與方案狀態；額度用完可參考<a href="pricing.html#pricing" style="color:#1a5c3f">方案與價格</a>。</p>
-</div>
-<div class="step-box">
-<div class="num">檢查 04</div>
-<h3>還是不行？寫信給我們</h3>
-<p>來信 <a href="mailto:contact@triplehai.com" style="color:#1a5c3f">contact@triplehai.com</a>，說明發生時間與操作步驟，我們會盡快幫你查。</p>
+<h3>翻譯小幫手有哪些特點？</h3>
+<p>翻譯小幫手只做 LINE 群組翻譯：加入群組就能用，不用下載、不用註冊，語言會從雙方傳的訊息自動認得；支援繁體中文、印尼語、越南語、泰語、菲律賓語、英文，並針對台灣照護現場常用的詞（排班、量血壓、藥袋、加班費）做過調校。方案額度清楚標示，每個群組先有 50 則免費翻譯。</p>
 </div>
 </div>
 </section>
@@ -271,10 +355,12 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <div style="padding:0 40px" class="rwd-inner">
 <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#1a5c3f;letter-spacing:0.2em;margin-bottom:20px;font-weight:600">延 伸 閱 讀</div>
 <h2 style="font-size:36px;font-weight:700;line-height:1.25;margin-bottom:32px;letter-spacing:-0.01em">你可能也想看</h2>
-<a href="phrases.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">印尼看護句型對照表：50 句照護現場必備翻譯 →</a>
-<a href="phrases-vi.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">越南看護句型對照表 →</a>
+<a href="phrases.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">印尼看護常用中文 50 句：印尼文對照，可列印 →</a>
+<a href="phrases-vi.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">越南看護常用中文 50 句：越南文對照，可列印 →</a>
 <a href="phrases-th.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">泰國看護句型對照表 →</a>
-<a href="case-medication.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">真實故事：用藥溝通的誤解，「飯後吃」還是「飯前吃」？ →</a>
+<a href="case-medication.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">示範情境：回診前一天，在群組交代用藥與準備（印尼文）→</a>
+<a href="case-emergency.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">示範情境：長輩半夜不舒服，看護在群組回報（越南文）→</a>
+<a href="guide-hire-foreign-caregiver.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">聘僱外籍看護完整指南：資格、流程與費用 →</a>
 </div>
 </section>
 
