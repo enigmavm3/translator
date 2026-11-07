@@ -1,0 +1,49 @@
+name: IndexNow
+# 根目錄 *.html 有新增或更新、被推上 main 時，把「有在 sitemap.xml 裡」的網址送 IndexNow（Bing／Yahoo 等）。
+# 雲端排程 agent 的網路連不到 api.indexnow.org，所以改由這個 workflow 送（做法同 enigmavm3/Lagerstroemia）。
+on:
+  push:
+    branches: [main]
+    paths: ["*.html"]
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Submit changed URLs
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, re, subprocess, urllib.request
+          base = "https://triplehai.com/translator/"
+          keys = [p for p in glob.glob("*.txt") if re.fullmatch(r"[0-9a-f]{32}", p[:-4]) and open(p).read().strip() == p[:-4]]
+          if len(keys) != 1:
+              raise SystemExit(f"expect exactly one IndexNow key file, found {keys}")
+          key = keys[0][:-4]
+          before = os.environ.get("BEFORE") or ""
+          rng = [before, "HEAD"] if re.fullmatch(r"[0-9a-f]{40}", before) and not set(before) == {"0"} else ["HEAD~1", "HEAD"]
+          try:
+              changed = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", *rng, "--", "*.html"], text=True).split()
+          except subprocess.CalledProcessError:
+              changed = []
+          sitemap = open("sitemap.xml", encoding="utf-8").read()
+          listed = set(re.findall(r"<loc>([^<]+)</loc>", sitemap))
+          urls = []
+          for f in changed:
+              if "/" in f:
+                  continue
+              url = base if f == "index.html" else base + f
+              if url in listed:
+                  urls.append(url)
+          print("URLs:", json.dumps(urls, ensure_ascii=False))
+          if not urls:
+              raise SystemExit(0)
+          body = json.dumps({"host": "triplehai.com", "key": key, "keyLocation": base + key + ".txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("IndexNow status:", r.status)
+          PY

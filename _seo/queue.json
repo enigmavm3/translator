@@ -1,0 +1,822 @@
+{
+ "version": 1,
+ "site": "https://triplehai.com/translator/",
+ "updated": "2026-11-07",
+ "status_values": [
+  "queued",
+  "in_progress",
+  "published",
+  "failed",
+  "skipped"
+ ],
+ "rule": "每次執行取 status=queued 且 priority 最小的一筆；一次只發 1 頁。細節見 _seo/PLAYBOOK.md。",
+ "pages": [
+  {
+   "slug": "guide-caregiver-first-week.html",
+   "scenario": "家庭看護",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外籍看護 第一天 交代事項",
+    "secondary": [
+     "外籍看護 交接",
+     "看護 工作清單",
+     "看護 第一週"
+    ]
+   },
+   "search_intent": "新雇主看護剛到府，想知道第一天、第一週要交代什麼、怎麼交代才不會漏",
+   "title": "外籍看護第一天要交代什麼？第一週交接清單＋可直接傳的群組訊息",
+   "internal_links": [
+    "use-cases.html#caregiver",
+    "line-translation-guide.html#messages",
+    "phrases.html",
+    "guide-hire-foreign-caregiver.html"
+   ],
+   "why_opportunity": "第一頁幾乎都是仲介部落格（21世紀、順心、全世界人力）與一篇 50+ 專訪，沒有一頁給出「可以直接複製傳給看護」的交接訊息；我方可用群組訊息範本＋第一週時間軸切入。",
+   "demo_languages": [
+    "印尼文",
+    "越南文"
+   ],
+   "notes": "醫療相關（用藥、量血壓）→ 必附「以醫護指示為準」。",
+   "priority": 10,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-factory-dorm-rules.html",
+   "scenario": "工廠與移工",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "移工宿舍管理規則 母語",
+    "secondary": [
+     "宿舍規定 越南文",
+     "移工宿舍 公告",
+     "宿舍 生活公約"
+    ]
+   },
+   "search_intent": "工廠雇主或宿舍管理員要訂／公告宿舍規則，想知道要用母語公告、怎麼寫才清楚",
+   "title": "移工宿舍規則怎麼公告？用母語講清楚的寫法＋群組公告範例",
+   "internal_links": [
+    "for-factories.html#dorm",
+    "use-cases.html#factory",
+    "line-translation-guide.html",
+    "for-agencies.html"
+   ],
+   "why_opportunity": "第一頁是顧問公司（cfimc）、仲介（唐明）與駐越辦事處公告，規定散在各處；沒有「規則寫好後怎麼在 LINE 群組用母語公告、怎麼確認看懂」的實作頁。",
+   "demo_languages": [
+    "越南文",
+    "印尼文",
+    "泰文"
+   ],
+   "notes": "法規（宿舍規則要以移工母語公告等）→ 必附資料來源（勞動部／勞動力發展署原文）＋查證日期；agent 若查不到原文，該段改寫成「建議做法」不寫成法規。",
+   "priority": 20,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-line-builtin-translation.html",
+   "scenario": "LINE 群組操作教學",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "LINE 內建翻譯 群組",
+    "secondary": [
+     "LINE 長按翻譯",
+     "LINE 翻譯功能 怎麼用",
+     "LINE 翻譯 只有自己看得到"
+    ]
+   },
+   "search_intent": "想知道 LINE 本身的翻譯功能能不能在群組用、能不能翻印尼文越南文",
+   "title": "LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪",
+   "internal_links": [
+    "line-translation-guide.html",
+    "guide-choose-line-group-translator.html",
+    "use-cases.html"
+   ],
+   "why_opportunity": "第一頁是對岸搜狐、iT 邦幫忙技術文、LINE 官方翻譯帳號舊教學與一家競品部落格；台灣繁中「長按翻譯 vs 群組自動翻譯」的正面說明還沒有專頁。",
+   "demo_languages": [],
+   "notes": "LINE 內建功能的現況（支援語言、操作路徑）agent 要用 WebSearch 查 LINE 官方說明並附查證日期；查不到就寫得保守。",
+   "priority": 30,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-helper-school-pickup.html",
+   "scenario": "外籍幫傭",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外籍幫傭 接送小孩",
+    "secondary": [
+     "幫傭 接送 注意事項",
+     "幫傭 照顧小孩 交代",
+     "放學 接送 交代"
+    ]
+   },
+   "search_intent": "雙薪家庭請了幫傭，想知道接送小孩要交代哪些事、怎麼用訊息確認",
+   "title": "外籍幫傭接送小孩要交代什麼？放學接送清單＋群組確認訊息範例",
+   "internal_links": [
+    "use-cases.html#helper",
+    "guide-domestic-helper.html",
+    "tool-helper-points.html",
+    "line-translation-guide.html#messages"
+   ],
+   "why_opportunity": "第一頁是 TVBS 申請新制懶人包、媽媽寶寶論壇、香港親子論壇與仲介文，問的是「能不能請」而不是「怎麼交代」；2026 新制後一孩家庭可申請，接送交代是新需求。",
+   "demo_languages": [
+    "菲律賓文",
+    "印尼文"
+   ],
+   "notes": "",
+   "priority": 40,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-agency-line-group.html",
+   "scenario": "仲介",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "仲介 雇主 移工 LINE 群組",
+    "secondary": [
+     "三方群組",
+     "仲介 群組 管理",
+     "雇主 移工 溝通 仲介"
+    ]
+   },
+   "search_intent": "仲介同仁想把雇主、移工、自己放進同一個群組，想知道怎麼建、規則怎麼定",
+   "title": "仲介、雇主、移工三方 LINE 群組怎麼建？群組規則＋日常訊息範例",
+   "internal_links": [
+    "for-agencies.html",
+    "for-factories.html",
+    "use-cases.html#caregiver",
+    "line-translation-guide.html"
+   ],
+   "why_opportunity": "第一頁被勞動部「移點通」新聞稿與幾篇新聞佔住，都在講官方帳號，沒有「三方群組實際怎麼運作」的教學；仲介是我方 B2B 重點。",
+   "demo_languages": [
+    "印尼文",
+    "越南文"
+   ],
+   "notes": "for-agencies.html 是 noindex，可以連過去，但內容要獨立完整。",
+   "priority": 50,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-caregiver-ramadan.html",
+   "scenario": "家庭看護",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "印尼看護 齋戒月",
+    "secondary": [
+     "齋戒月 雇主 注意事項",
+     "開齋節 放假",
+     "齋戒月 工作安排"
+    ]
+   },
+   "search_intent": "雇主想知道齋戒月期間看護的作息、飲食、工作怎麼調整，以及要怎麼溝通",
+   "title": "印尼看護齋戒月怎麼安排？雇主要知道的作息調整＋印尼文關心句",
+   "internal_links": [
+    "use-cases.html#caregiver",
+    "phrases.html",
+    "line-translation-guide.html#messages",
+    "guide-hire-foreign-caregiver.html"
+   ],
+   "why_opportunity": "第一頁是 CTWant 一篇新聞＋多家仲介與 Nina 印尼語教室，季節性明顯；2027 齋戒月預計 2/8 開始，12 月前上線可吃到 1–2 月的搜尋高峰。",
+   "demo_languages": [
+    "印尼文"
+   ],
+   "notes": "時效：2027 齋戒月預計 2027-02-08～03-09（以印尼宗教部公告為準，附查證日期）。宗教內容只寫雇主可做的體貼安排，不評論教義。",
+   "priority": 60,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-cross-border-couple-language.html",
+   "scenario": "跨國戀愛與朋友",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "異國戀 語言不通",
+    "secondary": [
+     "跨國戀愛 溝通",
+     "異國戀 吵架",
+     "外國另一半 聊天 翻譯"
+    ]
+   },
+   "search_intent": "跨國伴侶在聊天、吵架時常卡在語言，想找方法",
+   "title": "異國戀語言不通怎麼辦？聊天、吵架、說心裡話的 LINE 群組做法",
+   "internal_links": [
+    "use-cases.html#friends",
+    "line-translation-guide.html",
+    "guide-choose-line-group-translator.html"
+   ],
+   "why_opportunity": "第一頁是 Dcard、方格子、女人迷、PTT 分享文，沒有任何一頁給出具體做法；典型的「論壇佔位」長尾。",
+   "demo_languages": [
+    "英文",
+    "泰文"
+   ],
+   "notes": "跨站連結可放 https://triplehai.com/love/ 。注意：伴侶群是付費率較低的族群，內容不要過度強調付費。",
+   "priority": 70,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-factory-payslip.html",
+   "scenario": "工廠與移工",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "移工 薪資明細 母語",
+    "secondary": [
+     "薪資單 越南文",
+     "移工 薪水 看不懂",
+     "發薪 通知 移工"
+    ]
+   },
+   "search_intent": "工廠人資要發薪、移工看不懂薪資單或常來問，想知道規定和怎麼說明",
+   "title": "移工看不懂薪資單怎麼辦？雙語薪資明細重點＋發薪日群組說明範例",
+   "internal_links": [
+    "for-factories.html",
+    "use-cases.html#factory",
+    "for-agencies.html"
+   ],
+   "why_opportunity": "第一頁是 cfimc、環久、萬通等顧問／仲介部落格與勞動力發展署新聞；沒有「發薪日在群組怎麼說明、怎麼回答扣款疑問」的實作內容。",
+   "demo_languages": [
+    "越南文",
+    "印尼文"
+   ],
+   "notes": "法規（薪資明細須含母語等）→ 必附勞動部原始條文或函釋＋查證日期。頁面要寫「薪資、扣款以公司書面文件與相關法令為準」。",
+   "priority": 80,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-thailand-line-booking.html",
+   "scenario": "出國旅遊",
+   "page_type": "短句",
+   "keyword": {
+    "primary": "泰國 LINE 預約 泰文",
+    "secondary": [
+     "曼谷 按摩 預約 LINE",
+     "泰國 餐廳 訂位 泰文",
+     "泰國 店家 LINE 溝通"
+    ]
+   },
+   "search_intent": "去泰國自由行，店家只給 LINE，想知道怎麼用 LINE 跟泰國店家預約、改時間",
+   "title": "泰國店家只收 LINE 預約？訂按摩、餐廳、改時間的泰文訊息範例",
+   "internal_links": [
+    "use-cases.html#travel",
+    "line-translation-guide.html",
+    "phrases-th.html"
+   ],
+   "why_opportunity": "第一頁是個人旅遊部落格、旅行社票券頁、按摩店 LINE 官方帳號；泰國 LINE 普及，但沒有專講「用 LINE 跟泰國店家來回溝通」的頁面。",
+   "demo_languages": [
+    "泰文"
+   ],
+   "notes": "跨站：旅遊站 https://triplehai.com/travel/ 已有包車、住宿、交朋友、總覽 4 篇，本頁只講預約與改期，避免撞題，並連過去。泰文句子沒把握就刪。",
+   "priority": 90,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-caregiver-daily-report.html",
+   "scenario": "家庭看護",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "外籍看護 每日回報",
+    "secondary": [
+     "照護紀錄 範本",
+     "看護 LINE 回報",
+     "看護 血壓 紀錄 回報"
+    ]
+   },
+   "search_intent": "家屬白天上班，想讓看護每天在群組回報長輩狀況，想要範本",
+   "title": "外籍看護每日回報怎麼做？LINE 群組照護回報範本（吃飯、睡眠、血壓）",
+   "internal_links": [
+    "use-cases.html#caregiver",
+    "case-medication.html",
+    "phrases.html",
+    "phrases-vi.html"
+   ],
+   "why_opportunity": "第一頁是縣市衛生局表單、衛福部問答、仲介文，都是申請用表格；「家屬要的日常回報格式」沒有人做。",
+   "demo_languages": [
+    "印尼文",
+    "越南文"
+   ],
+   "notes": "醫療 → 「以醫護指示為準」；回報異常時要寫「請聯絡醫護人員／119」。",
+   "priority": 100,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "phrases-tl.html",
+   "scenario": "外籍幫傭",
+   "page_type": "短句",
+   "keyword": {
+    "primary": "菲律賓文 常用句 幫傭",
+    "secondary": [
+     "他加祿語 中文對照",
+     "菲律賓看護 常用句",
+     "Tagalog 家事"
+    ]
+   },
+   "search_intent": "家裡請菲律賓籍幫傭或看護，想要中文↔菲律賓文的常用句",
+   "title": "菲律賓幫傭常用中文句｜中文↔菲律賓文（Tagalog）家事、接送、照護對照",
+   "internal_links": [
+    "use-cases.html#helper",
+    "phrases-en.html",
+    "phrases.html",
+    "guide-domestic-helper.html"
+   ],
+   "why_opportunity": "第一頁是語言學習站（Glossika、NativeCamp、ling-app）的旅遊／搭訕短句，沒有台灣雇主情境（家事、接送、照護）的 Tagalog 對照；我方 phrases 系列缺這一語。",
+   "demo_languages": [
+    "菲律賓文"
+   ],
+   "notes": "外語密度最高的一頁：每句 Tagalog 都要自審，沒把握的句子刪掉，句數寧少勿錯（至少 25 句）。標題與 phrases-* 相似屬正常（不同語言）。",
+   "priority": 110,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-factory-leave-request.html",
+   "scenario": "工廠與移工",
+   "page_type": "短句",
+   "keyword": {
+    "primary": "移工 請假 越南文",
+    "secondary": [
+     "請病假 越南文",
+     "工廠 請假 印尼文",
+     "請假 規則 移工"
+    ]
+   },
+   "search_intent": "工廠主管想讓移工知道請假怎麼請，也想看懂移工傳來的請假訊息",
+   "title": "移工請假怎麼說？病假、事假的越南文、印尼文群組訊息範例",
+   "internal_links": [
+    "for-factories.html#shift",
+    "phrases-vi.html",
+    "use-cases.html#factory"
+   ],
+   "why_opportunity": "第一頁是移民署新住民語言教室、勞發署移點通宣導品、Google Sites 自學筆記與 HiNative；沒有「主管↔移工」雙向請假訊息的頁面。",
+   "demo_languages": [
+    "越南文",
+    "印尼文"
+   ],
+   "notes": "請假規則屬法規 → 附資料來源＋查證日期，並寫「以公司規定與相關法令為準」。",
+   "priority": 120,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-family-care-line-group.html",
+   "scenario": "LINE 群組操作教學",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "家庭照護 LINE 群組 規則",
+    "secondary": [
+     "多個家人 交代 看護",
+     "照護群組 怎麼建",
+     "家人 群組 分工"
+    ]
+   },
+   "search_intent": "兄弟姊妹一起照顧爸媽，看護同時收到很多人的交代，想把群組整理清楚",
+   "title": "一個看護、好幾個家人：家庭照護 LINE 群組怎麼建、誰負責交代",
+   "internal_links": [
+    "line-translation-guide.html",
+    "use-cases.html#caregiver",
+    "case-schedule.html",
+    "guide-caregiver-process.html"
+   ],
+   "why_opportunity": "第一頁是康健雜誌、元氣網、一篇仲介調解文，談的是心態；沒有「群組成員、主要交代人、公告怎麼放」的操作教學。",
+   "demo_languages": [
+    "印尼文"
+   ],
+   "notes": "",
+   "priority": 130,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-caregiver-sick-clinic.html",
+   "scenario": "家庭看護",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外籍看護 生病 看醫生",
+    "secondary": [
+     "看護 生病 請假",
+     "移工 就醫 溝通",
+     "看護 不舒服 怎麼說"
+    ]
+   },
+   "search_intent": "看護自己生病，雇主想知道怎麼帶去看醫生、怎麼溝通、照顧空窗怎麼辦",
+   "title": "外籍看護生病了怎麼辦？就醫前後的溝通重點＋群組訊息範例",
+   "internal_links": [
+    "use-cases.html#caregiver",
+    "case-emergency.html",
+    "guide-change-caregiver-agency.html",
+    "phrases.html"
+   ],
+   "why_opportunity": "第一頁全是仲介／顧問部落格（ghsha、cfimc、unipro、新興人力），內容偏健保與職災規定；「怎麼問她哪裡不舒服、怎麼跟醫生轉述」沒人寫。",
+   "demo_languages": [
+    "印尼文",
+    "越南文"
+   ],
+   "notes": "醫療 → 「以醫護指示為準」；健保、1955 等法規 → 附來源＋查證日期。",
+   "priority": 140,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-agency-bilingual-staff.html",
+   "scenario": "仲介",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "仲介 雙語人員 翻譯",
+    "secondary": [
+     "仲介 翻譯 人力",
+     "雙語人員 工作量",
+     "仲介 半夜 電話"
+    ]
+   },
+   "search_intent": "仲介主管想減少雙語同仁被日常傳話綁住的時間",
+   "title": "仲介雙語人員忙不過來？把日常傳話交給群組翻譯的分工做法",
+   "internal_links": [
+    "for-agencies.html",
+    "for-factories.html",
+    "use-cases.html"
+   ],
+   "why_opportunity": "第一頁只有 21 世紀人力一篇（僑外生擔任雙語人員）與幾篇仲介首頁；搜尋量小但幾乎沒有競爭，且正好是我方仲介合作的痛點。",
+   "demo_languages": [
+    "越南文"
+   ],
+   "notes": "不寫任何價格或合作方案細節，多群組一律「歡迎來信洽詢」。",
+   "priority": 150,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-meet-partner-family.html",
+   "scenario": "跨國戀愛與朋友",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外國另一半 家人 溝通",
+    "secondary": [
+     "見家長 語言不通",
+     "跨國情侶 家族群組",
+     "外國女友 見家長"
+    ]
+   },
+   "search_intent": "要帶外籍另一半見家人、或想讓爸媽和另一半在 LINE 聊天",
+   "title": "帶外國另一半見家人：語言不通時，用 LINE 家族群組先熟起來",
+   "internal_links": [
+    "use-cases.html#friends",
+    "line-translation-guide.html",
+    "guide-choose-line-group-translator.html"
+   ],
+   "why_opportunity": "第一頁幾乎是知乎、豆瓣、澎湃等簡中內容加一篇 Dcard，台灣繁中專頁空白。",
+   "demo_languages": [
+    "英文",
+    "越南文"
+   ],
+   "notes": "跨站連結可放 https://triplehai.com/love/ 。",
+   "priority": 160,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-factory-new-worker.html",
+   "scenario": "工廠與移工",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "新進移工 第一週",
+    "secondary": [
+     "移工 報到 交代",
+     "移工 入境 生活 說明",
+     "新移工 群組"
+    ]
+   },
+   "search_intent": "工廠迎接新一批移工，主管想知道第一週要交代什麼、怎麼用群組帶",
+   "title": "新進移工第一週要交代什麼？報到、宿舍、上工的群組訊息範例",
+   "internal_links": [
+    "for-factories.html",
+    "use-cases.html#factory",
+    "for-agencies.html"
+   ],
+   "why_opportunity": "第一頁是勞發署與仲介公司（鎵興、21 世紀）對入國講習的說明，講的是程序；「主管第一週在群組怎麼說」沒有專頁。",
+   "demo_languages": [
+    "越南文",
+    "印尼文",
+    "泰文"
+   ],
+   "notes": "入國講習等程序 → 附來源＋查證日期。",
+   "priority": 170,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-host-foreign-friends.html",
+   "scenario": "出國旅遊",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外國朋友來台灣 接待",
+    "secondary": [
+     "帶外國朋友玩 台灣",
+     "外國朋友 行程 群組",
+     "接待 外國朋友 溝通"
+    ]
+   },
+   "search_intent": "東南亞或其他國家的朋友來台灣玩，想安排行程並在 LINE 群組溝通",
+   "title": "外國朋友來台灣玩怎麼接待？行程群組、集合與臨時改變的訊息範例",
+   "internal_links": [
+    "use-cases.html#travel",
+    "line-translation-guide.html",
+    "guide-choose-line-group-translator.html"
+   ],
+   "why_opportunity": "第一頁是方格子、Threads 求救文、LINE 旅遊功能教學與 OpenChat 社群，沒有「接待者用 LINE 群組跟外國朋友溝通」的頁面。",
+   "demo_languages": [
+    "泰文",
+    "英文",
+    "印尼文"
+   ],
+   "notes": "提醒：對方要有 LINE 才能進群組；不保證對方國家普遍使用 LINE，照實寫。",
+   "priority": 180,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-helper-chore-schedule.html",
+   "scenario": "外籍幫傭",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "外籍幫傭 工作表",
+    "secondary": [
+     "幫傭 家事分工",
+     "每日 每週 家事 清單",
+     "幫傭 工作時間表 範本"
+    ]
+   },
+   "search_intent": "雇主想做一份幫傭每日／每週家事表，並用訊息確認",
+   "title": "外籍幫傭工作表怎麼排？每日、每週家事清單範本＋群組確認訊息",
+   "internal_links": [
+    "use-cases.html#helper",
+    "guide-helper-application.html",
+    "guide-helper-vs-caregiver.html"
+   ],
+   "why_opportunity": "第一頁被香港網站佔滿（入境處、MaidInHK、HK01、shemom），用語與法規都是香港；台灣版家事表是明顯空缺。",
+   "demo_languages": [
+    "菲律賓文",
+    "印尼文"
+   ],
+   "notes": "幫傭工作範圍與工時屬法規 → 附來源＋查證日期，不要沿用香港規定。",
+   "priority": 190,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-caregiver-day-off.html",
+   "scenario": "家庭看護",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "外籍看護 休假 溝通",
+    "secondary": [
+     "看護 放假 怎麼排",
+     "看護 休假 代班",
+     "休假日 群組 通知"
+    ]
+   },
+   "search_intent": "雇主要安排看護休假，想知道規定、怎麼事先講好、休假當天誰照顧",
+   "title": "外籍看護休假怎麼排？事先講好的訊息範例＋休假日照顧安排",
+   "internal_links": [
+    "use-cases.html#caregiver",
+    "case-schedule.html",
+    "guide-hire-foreign-caregiver.html",
+    "phrases.html"
+   ],
+   "why_opportunity": "第一頁 9 篇幾乎都是仲介部落格（萬通、亞太、世華、全世界人力），規定寫了很多遍，但「休假前一週怎麼講、休假當天怎麼聯絡」沒人示範；case-schedule 只講排休誤會。",
+   "demo_languages": [
+    "印尼文",
+    "越南文"
+   ],
+   "notes": "休假規定 → 附《雇主聘僱外國人許可及管理辦法》等原文＋查證日期。與 case-schedule.html 相近但角度不同（本頁是安排與溝通流程）。",
+   "priority": 200,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-line-announcement.html",
+   "scenario": "LINE 群組操作教學",
+   "page_type": "教學",
+   "keyword": {
+    "primary": "LINE 群組 公告 置頂",
+    "secondary": [
+     "LINE 公告 移工",
+     "群組 重要訊息 置頂",
+     "LINE 公告 多國語言"
+    ]
+   },
+   "search_intent": "主管或家屬想把重要規定置頂，讓不同語言的成員都看得到",
+   "title": "LINE 群組公告怎麼設？重要規定置頂，讓不同語言的成員都看得懂",
+   "internal_links": [
+    "line-translation-guide.html",
+    "for-factories.html",
+    "use-cases.html"
+   ],
+   "why_opportunity": "第一頁是瘋先生、趨勢科技、Buzzorange 等通用 LINE 教學，沒有「多語群組」角度。",
+   "demo_languages": [],
+   "notes": "⚠️ 產品事實待核：翻譯小幫手的譯文能不能被設為公告、記事本內容會不會翻譯——PLAYBOOK 規定 agent 只能寫「把含譯文的那則訊息設為公告」這類保守寫法；核實前列 priority 後段。",
+   "priority": 210,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-agency-dispute.html",
+   "scenario": "仲介",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "雇主 看護 誤會 仲介",
+    "secondary": [
+     "看護 雇主 衝突",
+     "仲介 調解",
+     "溝通紀錄 群組"
+    ]
+   },
+   "search_intent": "仲介或雇主遇到雙方誤會，想知道怎麼釐清、怎麼避免",
+   "title": "雇主和看護有誤會時，仲介怎麼協助？釐清事實與留下溝通紀錄的做法",
+   "internal_links": [
+    "for-agencies.html",
+    "case-schedule.html",
+    "case-silence.html",
+    "guide-change-caregiver-agency.html"
+   ],
+   "why_opportunity": "第一頁只有一篇 news.org.tw 調解文、康健雜誌與幾則社會新聞；給仲介的實務頁空白。",
+   "demo_languages": [
+    "印尼文"
+   ],
+   "notes": "不寫任何法律意見；申訴管道（1955 等）附來源＋查證日期。",
+   "priority": 220,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-new-resident-family.html",
+   "scenario": "跨國戀愛與朋友",
+   "page_type": "情境指南",
+   "keyword": {
+    "primary": "新住民 家人 溝通",
+    "secondary": [
+     "越南配偶 家人 溝通",
+     "外籍配偶 家族群組",
+     "婆家 語言不通"
+    ]
+   },
+   "search_intent": "家裡有越南、印尼等新住民配偶，長輩或親戚想在 LINE 群組好好溝通",
+   "title": "家裡有新住民，長輩語言不通怎麼辦？LINE 家族群組的溝通做法",
+   "internal_links": [
+    "use-cases.html#friends",
+    "line-translation-guide.html",
+    "phrases-vi.html"
+   ],
+   "why_opportunity": "第一頁是學術論文、新聞與維基，沒有實用溝通指南；越南籍配偶約 12.8 萬人（內政部，以 agent 查證數字為準）。",
+   "demo_languages": [
+    "越南文",
+    "印尼文"
+   ],
+   "notes": "用「新住民」「配偶」，不用貶抑稱呼；數字要附內政部來源＋查證日期，查不到就不寫數字。",
+   "priority": 230,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  },
+  {
+   "slug": "guide-japan-minshuku-line.html",
+   "scenario": "出國旅遊",
+   "page_type": "短句",
+   "keyword": {
+    "primary": "日本 民宿 房東 LINE",
+    "secondary": [
+     "日本 民宿 日文 聯絡",
+     "民泊 入住 溝通",
+     "日本 房東 不會日文"
+    ]
+   },
+   "search_intent": "去日本住民宿，房東用 LINE 聯絡，不會日文",
+   "title": "日本民宿房東用 LINE 聯絡？入住、拿鑰匙、延遲抵達的日文訊息範例",
+   "internal_links": [
+    "use-cases.html#travel",
+    "line-translation-guide.html",
+    "guide-choose-line-group-translator.html"
+   ],
+   "why_opportunity": "第一頁是背包客棧論壇、個人部落格（林氏璧）、LIVE JAPAN 的 Email 範本；LINE 在日本普及，但「跟房東 LINE 對話」的範本頁空白。",
+   "demo_languages": [
+    "日文"
+   ],
+   "notes": "日文不是主力六語：頁面只能寫「也能翻日文、韓文等」，不可暗示日文是主力。日文句子沒把握就刪。放最後，前 23 篇成效出來再決定要不要發（可翻案）。",
+   "priority": 240,
+   "status": "queued",
+   "serp_checked_on": "2026-11-07",
+   "published_at": null,
+   "failed_reason": null,
+   "commit": null
+  }
+ ],
+ "update_existing": [
+  {
+   "target": "line-translation-guide.html",
+   "keyword": "LINE 群組 機器人 加不進去",
+   "why": "既有 7 項排查已涵蓋大部分；可補「邀請清單找不到機器人＝還沒加好友」等說明。需產品 session 核實「一個群組能否同時有多個機器人」。",
+   "status": "needs_human"
+  },
+  {
+   "target": "for-factories.html",
+   "keyword": "工廠 安全 越南文 印尼文 常用句",
+   "why": "#safety 段已有示範，補 5–10 句工安提醒即可，不另開新頁避免撞題。",
+   "status": "needs_human"
+  },
+  {
+   "target": "guide-change-caregiver-agency.html",
+   "keyword": "外籍看護 期滿 續聘 溝通",
+   "why": "期滿轉換已在該頁，可補一段「續聘前怎麼和看護談」的訊息範例。",
+   "status": "needs_human"
+  },
+  {
+   "target": "phrases-en.html",
+   "keyword": "菲律賓幫傭 英文 常用句",
+   "why": "phrases-en 目前是看護情境，可加一段幫傭家事英文；Tagalog 另開 phrases-tl.html。",
+   "status": "needs_human"
+  }
+ ],
+ "backlog": [
+  {
+   "keyword": "失智長輩 外籍看護 溝通",
+   "scenario": "家庭看護",
+   "why": "第一頁是衛生局 PDF、失智症協會與長照平台，醫療成分高；等醫療審稿方式確定再排。"
+  },
+  {
+   "keyword": "LINE 群組 語音訊息 翻譯",
+   "scenario": "LINE 群組操作教學",
+   "why": "第一頁被競品自家部落格佔滿（同一家 6 篇以上），短期難上；且基本方案不含語音，文案要小心。"
+  }
+ ]
+}
