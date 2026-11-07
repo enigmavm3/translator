@@ -38,9 +38,9 @@
    ],
    "notes": "醫療相關（用藥、量血壓）→ 必附「以醫護指示為準」。",
    "priority": 10,
-   "status": "queued",
+   "status": "published",
    "serp_checked_on": "2026-11-07",
-   "published_at": null,
+   "published_at": "2026-11-07",
    "failed_reason": null,
    "commit": null
   },
