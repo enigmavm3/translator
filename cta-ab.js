@@ -2,17 +2,20 @@
 //
 // 1) 來源歸因：Google Ads 點擊（gclid/gad_source/gbraid/wbraid）進站時，把 sessionStorage src 設為 gads；
 //    站內換頁後仍維持。其餘訪客（src 非 gads）行為完全不變：CTA 維持官網通用連結 vX3Iv8U。
-// 2) gclid：落地時從網址抓下來存 sessionStorage gclid（與 src 同一處）。每次廣告落地都會覆寫；
-//    該次落地沒有 gclid（只有 gbraid/wbraid/gad_source）就清掉，避免帶到舊的 gclid。
+// 2) 點擊參數 gclid/gbraid/wbraid/cmp：廣告落地時從網址抓下來，各自存 sessionStorage 同名 key。
+//    每次廣告落地都會整組覆寫；該次落地沒有的參數就清掉，避免帶到前一次落地的舊值。（2026-11-08 加 gbraid/wbraid/cmp）
 // 3) A/B：只對 src=gads 分組。第一次隨機 50/50，組別存 localStorage cta_arm；
 //    localStorage 不能用就退回 sessionStorage，都不能用就固定 A 組。
 //    A 組：https://lin.ee/waihMSZ（原廣告管道連結）
-//    B 組：https://liff.line.me/2012196728-wk7eK1UO?src=gads&arm=b&gclid=<gclid>（無 gclid 時省略 gclid 參數）
+//    B 組：https://liff.line.me/2012196728-wk7eK1UO?src=gads&arm=b[&gclid=..][&gbraid=..][&wbraid=..][&cmp=..]
+//          （沒有的參數就不附加；值一律 encodeURIComponent）
 // 4) debug：網址加 ?arm=a 或 ?arm=b 可強制分組（只對 src=gads 生效，並寫回儲存，換頁維持）。
 // 5) 供各頁 GA4 事件取用：window.thCta = { src: 'gads' | 'web', arm: 'a' | 'b' | 'none' }。
 (function () {
   var ADS_A_URL = 'https://lin.ee/waihMSZ';
   var LIFF_BASE = 'https://liff.line.me/2012196728-wk7eK1UO';
+  // 帶進 B 組 LIFF 連結的點擊參數（順序即附加順序）
+  var CLICK_KEYS = ['gclid', 'gbraid', 'wbraid', 'cmp'];
   var info = { src: 'web', arm: 'none' };
   window.thCta = info;
 
@@ -35,8 +38,10 @@
   try {
     if (/[?&](gclid|gad_source|gbraid|wbraid)=/.test(q)) {
       sessionStorage.setItem('src', 'gads');
-      var g = param(q, 'gclid');
-      if (g) sessionStorage.setItem('gclid', g); else sessionStorage.removeItem('gclid');
+      for (var j = 0; j < CLICK_KEYS.length; j++) {
+        var v0 = param(q, CLICK_KEYS[j]);
+        if (v0) sessionStorage.setItem(CLICK_KEYS[j], v0); else sessionStorage.removeItem(CLICK_KEYS[j]);
+      }
     }
     if (sessionStorage.getItem('src') !== 'gads') return;
   } catch (err) { return; }
@@ -58,9 +63,12 @@
 
   var target = ADS_A_URL;
   if (arm === 'b') {
-    var gclid = null;
-    try { gclid = sessionStorage.getItem('gclid'); } catch (e) {}
-    target = LIFF_BASE + '?src=gads&arm=b' + (gclid ? '&gclid=' + encodeURIComponent(gclid) : '');
+    target = LIFF_BASE + '?src=gads&arm=b';
+    for (var k = 0; k < CLICK_KEYS.length; k++) {
+      var v = null;
+      try { v = sessionStorage.getItem(CLICK_KEYS[k]); } catch (e) {}
+      if (v) target += '&' + CLICK_KEYS[k] + '=' + encodeURIComponent(v);
+    }
   }
 
   var fix = function () {
