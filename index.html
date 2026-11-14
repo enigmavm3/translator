@@ -776,6 +776,10 @@
       font-weight: 900;
     }
 
+    .scenarios + .scenarios { padding-top: 0; }
+
+    .promise.security { background: var(--cream-deep); }
+
     .simple-proof {
       padding: 72px 0;
       color: #fff;
@@ -1373,6 +1377,76 @@
       </div>
     </section>
 
+    <section class="scenarios" aria-labelledby="more-title">
+      <div class="section-wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-label">不只打字</div>
+            <h2 id="more-title">講的、錄的、聽的，<br>也都能翻。</h2>
+          </div>
+          <p>看護把長輩或醫護人員說的話錄下來傳到群組，會先轉成中文字，同時翻成看護的母語。語音翻譯適用免費體驗與進階、商用方案，🔊 聽譯文是進階、商用方案功能，詳見<a href="pricing.html#pricing">價目表</a>。</p>
+        </div>
+
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <div class="scenario-top">
+              <div class="scenario-icon" aria-hidden="true">🧩</div>
+              <div>
+                <div class="scenario-no">情境 04・看前後文</div>
+                <h3>話沒說完整，<br>也翻得對。</h3>
+              </div>
+            </div>
+            <div class="mini-chat" aria-label="參考前後文翻譯對話示意">
+              <div class="chat-date">今天 12:10</div>
+              <div class="bubble sent">阿嬤的藥放在桌上了。</div>
+              <div class="bubble bot">Obat Nenek ada di atas meja.</div>
+              <div class="bubble sent">飯後再給她。</div>
+              <div class="bubble bot">Berikan obatnya kepada Nenek setelah makan, ya.</div>
+              <div class="chat-date">第二句的譯文是「飯後把藥給阿嬤」</div>
+              <div class="bubble person" data-name="Siti">Baik, setelah makan saya berikan.</div>
+              <div class="bubble bot-return">好的，吃完飯我再拿給她。</div>
+            </div>
+          </article>
+
+          <article class="scenario-card">
+            <div class="scenario-top">
+              <div class="scenario-icon" aria-hidden="true">🎤</div>
+              <div>
+                <div class="scenario-no">情境 05・錄下長輩說的話</div>
+                <h3>阿嬤講台語，<br>看護也看得懂。</h3>
+              </div>
+            </div>
+            <div class="mini-chat" aria-label="錄音翻譯對話示意">
+              <div class="chat-date">今天 14:20</div>
+              <div class="bubble person" data-name="Siti">🎤 語音訊息 0:09（錄下阿嬤說的話）</div>
+              <div class="bubble bot">「我腰很痠，幫我翻身，枕頭墊高一點。」<br>📝 Pinggang saya pegal sekali. Tolong bantu saya miring, bantalnya dinaikkan sedikit.</div>
+              <div class="bubble person" data-name="Siti">Bu, Nenek bilang pinggangnya pegal. Saya sudah bantu miring.</div>
+              <div class="bubble bot-return">太太，阿嬤說腰很痠，我已經幫她翻身了。</div>
+              <div class="chat-date">台語、口音重或環境吵雜時可能聽錯，用藥、醫囑請再跟醫護人員確認</div>
+            </div>
+          </article>
+
+          <article class="scenario-card">
+            <div class="scenario-top">
+              <div class="scenario-icon" aria-hidden="true">🔊</div>
+              <div>
+                <div class="scenario-no">情境 06・聽譯文</div>
+                <h3>譯文念出來，<br>長輩用聽的也懂。</h3>
+              </div>
+            </div>
+            <div class="mini-chat" aria-label="聽譯文對話示意">
+              <div class="chat-date">今天 19:30</div>
+              <div class="bubble person" data-name="Siti">Nenek, sudah waktunya minum obat.</div>
+              <div class="bubble bot-return">阿嬤，該吃藥了。</div>
+              <div class="chat-date">按下方的「🔊 中文」，把這句念給阿嬤聽</div>
+              <div class="bubble bot">▶ 0:02 語音：阿嬤，該吃藥了。</div>
+              <div class="chat-date">看護也能跟著聽，這句台灣中文怎麼說</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="simple-proof">
       <div class="proof-inner">
         <div class="proof-copy">
@@ -1384,8 +1458,18 @@
           <div class="proof-point"><strong>她直接看母語</strong><span>照顧指令、提醒與回覆都能清楚理解。</span></div>
           <div class="proof-point"><strong>雙方都能回覆</strong><span>她說母語，你也能馬上看懂中文。</span></div>
           <div class="proof-point"><strong>在 LINE 裡完成</strong><span>用原本熟悉的聊天方式，溝通自然發生。</span></div>
+          <div class="proof-point"><strong>看得懂前後文</strong><span>翻譯時會參考群組前後的對話，口語、省略句比較不會翻錯。</span></div>
+          <div class="proof-point"><strong>加進群組就能用</strong><span>不用下載、不用註冊，也不用選語言，系統會自動認得。</span></div>
+          <div class="proof-point"><strong>24 小時都在</strong><span>半夜、假日傳的訊息，每一則也是當下就翻好。</span></div>
+          <div class="proof-point"><strong>用講的也能翻</strong><span>語音會先轉成中文字再翻譯，長輩講台語也可以（基本方案不含語音）。</span></div>
         </div>
       </div>
+    </section>
+
+    <section class="promise security" aria-labelledby="security-title">
+      <div class="promise-kicker">資安與隱私</div>
+      <h2 id="security-title">不使用中國的<br>伺服器、AI 模型<br>或資料庫。</h2>
+      <p>伺服器與資料庫位於美國的雲端平台，翻譯採用美國主流的 AI 模型服務商。我們會用最新一代的 AI 做資安審查，發現問題就修補；資料庫備份也有加密。對話只用於提供翻譯服務，除了交給 AI 模型服務商即時處理翻譯，不用於廣告，也不會提供或出售給其他第三方。詳見<a href="privacy.html">隱私權政策</a>。</p>
     </section>
 
     <section class="final-cta" aria-labelledby="cta-title">
