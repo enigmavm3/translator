@@ -101,9 +101,9 @@
    "demo_languages": [],
    "notes": "LINE 內建功能的現況（支援語言、操作路徑）agent 要用 WebSearch 查 LINE 官方說明並附查證日期；查不到就寫得保守。",
    "priority": 30,
-   "status": "queued",
+   "status": "published",
    "serp_checked_on": "2026-11-07",
-   "published_at": null,
+   "published_at": "2026-11-16",
    "failed_reason": null,
    "commit": null
   },

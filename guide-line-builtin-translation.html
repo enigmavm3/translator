@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9PB2VHZMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-Z9PB2VHZMN");
+  gtag("config", "AW-18387420345");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪｜翻譯小幫手</title>
+<meta name="description" content="LINE 內建翻譯有電腦版右鍵翻譯訊息、手機圖片「轉為文字」、LINE 社群自動程式三種（2026-11-16 查證官方說明）。整理操作步驟、印尼文／越南文／泰文支援情況、譯文只有自己看得到等限制，以及何時該改用群組自動翻譯。">
+<meta property="og:title" content="LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪">
+<meta property="og:description" content="LINE 自己就有翻譯功能，為什麼和看護、移工還是聊不起來？整理 LINE 內建翻譯的操作、支援語言與限制，以及什麼時候該改用群組自動翻譯。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://triplehai.com/translator/guide-line-builtin-translation.html">
+<link rel="canonical" href="https://triplehai.com/translator/guide-line-builtin-translation.html">
+<link rel="icon" type="image/png" href="icon_t.png">
+<link rel="apple-touch-icon" href="icon_t.png">
+<meta property="og:site_name" content="翻譯小幫手">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://triplehai.com/translator/images/after.png">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪">
+<meta name="twitter:description" content="LINE 自己就有翻譯功能，為什麼和看護、移工還是聊不起來？整理 LINE 內建翻譯的操作、支援語言與限制，以及什麼時候該改用群組自動翻譯。">
+<meta name="twitter:image" content="https://triplehai.com/translator/images/after.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+html, body { margin:0; padding:0; background:#fbf7ea; }
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; }
+.section-label { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:#1a5c3f; letter-spacing:0.15em; font-weight:600; margin-bottom:10px; }
+.section-text { font-size:20px; color:#3a3830; line-height:1.85; margin:0 0 24px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.method-card { background:#ffffff; border-left:4px solid #b8ad8c; padding:24px 28px; margin-bottom:16px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.method-card.best { border-left-color:#1a5c3f; }
+.method-card h3 { font-family:"Noto Serif TC", serif; font-size:22px; font-weight:700; margin:0 0 10px; color:#0a0a08; }
+.method-card p { font-size:18px; line-height:1.8; color:#3a3830; margin:0; }
+.compare-wrap { overflow-x:auto; margin:32px 0; }
+.compare { border-collapse:collapse; width:100%; min-width:640px; font-family:"Noto Sans TC", system-ui, sans-serif; font-size:16px; background:#ffffff; }
+.compare th, .compare td { border:1px solid #b8ad8c; padding:14px 16px; text-align:left; line-height:1.6; }
+.compare th { background:#1a5c3f; color:#ffffff; font-weight:600; white-space:nowrap; }
+.compare td:first-child { font-weight:600; white-space:nowrap; }
+.compare .yes { color:#1a5c3f; font-weight:700; }
+.compare .no { color:#a04a3c; }
+.step-box { background:#ffffff; border:1px solid #b8ad8c; padding:28px 32px; margin-bottom:16px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.step-box .num { font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:#1a5c3f; letter-spacing:0.2em; font-weight:600; margin-bottom:8px; }
+.step-box h3 { font-family:"Noto Serif TC", serif; font-size:22px; font-weight:700; margin:0 0 10px; color:#0a0a08; }
+.step-box p { font-size:18px; line-height:1.8; color:#3a3830; margin:0; }
+.faq-item { border-bottom:1px solid #b8ad8c; padding:28px 0; }
+.faq-item h3 { font-family:"Noto Serif TC", serif; font-size:21px; font-weight:700; margin:0 0 12px; color:#0a0a08; }
+.faq-item p { font-size:18px; line-height:1.85; color:#3a3830; margin:0; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.tip-box { background:#f4eed9; border-left:4px solid #c4963c; padding:24px 28px; margin:32px 0; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.tip-box h3 { font-size:16px; font-weight:700; margin:0 0 8px; color:#0a0a08; }
+.tip-box p { font-size:17px; line-height:1.8; color:#3a3830; margin:0; }
+.purpose-box { background:#ffffff; border:2px solid #1a5c3f; padding:28px 32px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.purpose-box h2 { font-family:"Noto Serif TC", serif; font-size:24px; font-weight:700; margin:0 0 14px; color:#1a5c3f; }
+.purpose-box ul { margin:0 0 14px; padding-left:22px; }
+.purpose-box li { font-size:18px; line-height:1.8; color:#3a3830; margin-bottom:8px; }
+.purpose-box li a { color:#1a5c3f; font-size:16px; white-space:nowrap; }
+.purpose-box p { font-size:17px; line-height:1.8; color:#3a3830; margin:0; }
+.msg-box { background:#ffffff; border-left:4px solid #c4963c; padding:20px 24px; margin-bottom:14px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.msg-box .msg-label { font-size:14px; font-weight:700; color:#1a5c3f; margin-bottom:8px; }
+.msg-box .msg-text { font-size:19px; line-height:1.8; color:#0a0a08; user-select:all; -webkit-user-select:all; }
+.msg-box .msg-note { font-size:15px; line-height:1.8; color:#3a3830; margin-top:10px; font-style:italic; }
+.step-box code { background:#f4eed9; padding:2px 6px; font-size:16px; }
+.demo-chat { background:#ffffff; border:1px solid #b8ad8c; padding:20px 24px; margin:24px 0; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.demo-chat .demo-label { display:inline-block; background:#1a5c3f; color:#ffffff; font-size:12px; letter-spacing:0.15em; padding:3px 10px; margin-bottom:14px; font-weight:600; }
+.demo-chat .line { margin:0 0 14px; }
+.demo-chat .who { font-size:14px; font-weight:700; color:#1a5c3f; margin-bottom:4px; }
+.demo-chat .orig { font-size:18px; line-height:1.7; color:#0a0a08; }
+.demo-chat .tr { font-size:16px; line-height:1.7; color:#3a3830; border-left:3px solid #c4963c; padding-left:10px; margin-top:4px; }
+.demo-chat .demo-note { font-size:14px; color:#3a3830; margin:8px 0 0; }
+.source-box { font-size:15px; line-height:1.8; color:#3a3830; border-top:1px solid #b8ad8c; padding-top:16px; margin-top:32px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.source-box a { color:#1a5c3f; word-break:break-all; }
+@media (max-width: 768px) {
+  .rwd-inner { padding:0 20px !important; }
+  .rwd-footer { grid-template-columns:1fr 1fr !important; gap:24px !important; }
+  .rwd-footer > div:first-child { grid-column:1 / -1 !important; }
+  h1 { font-size:32px !important; }
+  h2 { font-size:28px !important; }
+  .section-text { font-size:18px !important; }
+}
+@media (max-width: 480px) {
+  h1 { font-size:30px !important; }
+  .rwd-footer { grid-template-columns:1fr !important; }
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪", "description": "LINE 內建翻譯有電腦版右鍵翻譯訊息、手機圖片「轉為文字」、LINE 社群自動程式三種（2026-11-16 查證官方說明）。整理操作步驟、印尼文／越南文／泰文支援情況、譯文只有自己看得到等限制，以及何時該改用群組自動翻譯。", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-11-16", "dateModified": "2026-11-16", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/guide-line-builtin-translation.html"}, "image": "https://triplehai.com/translator/images/after.png", "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://triplehai.com/translator/guide-line-builtin-translation.html#faq", "mainEntity": [
+  {"@type": "Question", "name": "LINE 內建翻譯可以翻印尼文、越南文、泰文嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以，但要看是哪一種。電腦版右鍵翻譯訊息與手機圖片「轉為文字」的官方語言清單都包含印尼文、越南文、泰文；菲律賓文沒有列在清單上。手機上長按訊息看到的翻譯，多半是手機系統或鍵盤提供的，支援語言依手機而異。不論哪一種，譯文都只有你自己看得到。"}},
+  {"@type": "Question", "name": "LINE 長按訊息翻譯，對方看得到譯文嗎？", "acceptedAnswer": {"@type": "Answer", "text": "看不到。內建翻譯是把收到的訊息翻給你自己看，對方的畫面不會有任何變化。你回的中文對方一樣看不懂，要先翻成對方的語言、複製貼上再傳送。想讓雙方都直接看到譯文，要把翻譯機器人加進群組。"}},
+  {"@type": "Question", "name": "一般 LINE 群組可以開內建的自動翻譯嗎？", "acceptedAnswer": {"@type": "Answer", "text": "目前沒有這個選項。LINE 社群（OpenChat）的管理員可以在「自動程式」設定裡開啟翻譯；一般 LINE 群組沒有，要在群組裡自動翻譯，就要邀請翻譯機器人加入（翻譯小幫手是其中一種）。反過來，LINE 社群無法邀請機器人，所以家人與看護、工廠與移工請用一般群組。"}},
+  {"@type": "Question", "name": "已經加了翻譯小幫手，還需要用 LINE 內建翻譯嗎？", "acceptedAnswer": {"@type": "Answer", "text": "日常對話交給群組翻譯就好。內建翻譯可以當輔助：看護傳藥袋、公告的照片時，用手機的「轉為文字」看圖片上的字（翻譯小幫手不翻譯照片）；在電腦前想對照某一句的譯文，也可以按右鍵再翻一次。兩種做法不衝突。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "翻譯小幫手", "item": "https://triplehai.com/translator/"}, {"@type": "ListItem", "position": 2, "name": "LINE 內建翻譯怎麼用", "item": "https://triplehai.com/translator/guide-line-builtin-translation.html"}]}
+</script>
+<script>
+  // Google Ads 轉換：點擊任何 LINE 加好友連結 (lin.ee / liff.line.me)
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lin.ee"], a[href*="liff.line.me"]') : null;
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18387420345/MrKQCIS7g-YcELmJ579E'});
+    }
+  }, true);
+</script>
+  <script src="cta-ab.js"></script>
+</head>
+<body>
+<article style="background:#fbf7ea;color:#0a0a08;font-family:'Noto Serif TC', serif;line-height:1.7">
+
+<header style="border-bottom:1px solid #0a0a08;padding:20px 0 16px;font-family:'Noto Serif TC', serif;border-top:6px solid #1a5c3f"><div style="max-width:1120px;margin:0 auto;padding:0 40px;text-align:center"><a href="./" style="text-decoration:none"><div style="font-family:'Noto Serif TC', serif;font-size:32px;font-weight:900;letter-spacing:0.1em;color:#0a0a08">翻譯小幫手</div></a><div style="margin-top:8px;border-top:2px double #0a0a08;width:120px;margin:10px auto 0"></div></div></header>
+
+<!-- Hero -->
+<section style="max-width:1000px;margin:0 auto;padding:80px 40px 48px;text-align:center">
+<div style="display:inline-block;background:#1a5c3f;color:#ffffff;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.25em;padding:6px 16px;margin-bottom:32px;font-weight:600">使 用 教 學</div>
+<h1 style="font-size:clamp(36px, 5.5vw, 58px);line-height:1.2;font-weight:700;letter-spacing:-0.01em;margin-bottom:24px;color:#0a0a08">LINE 內建翻譯怎麼用？<br/>長按翻譯的限制，和群組自動翻譯差在哪</h1>
+<p style="font-size:22px;color:#3a3830;max-width:660px;margin:0 auto 16px;line-height:1.85">LINE 自己就有翻譯功能，為什麼和看護、移工還是聊不起來？<br/>先弄清楚內建翻譯能做什麼、不能做什麼，再決定要不要換做法。</p>
+<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#3a3830;letter-spacing:0.08em;margin-top:8px">最後更新 2026 年 11 月</div>
+</section>
+
+<!-- 這篇幫你做什麼 -->
+<section style="max-width:900px;margin:0 auto;padding:0 0 64px">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="purpose-box">
+<h2>這篇能幫你做什麼</h2>
+<ul>
+<li><strong>搞清楚 LINE 內建翻譯有哪幾種</strong>：電腦版右鍵翻譯、手機圖片「轉為文字」、LINE 社群的自動程式，以及手機長按選單的「翻譯」到底是誰提供的，附 LINE 官方說明的查證結果。<a href="#builtin">看五種做法 ↓</a></li>
+<li><strong>知道它的限制在哪</strong>：為什麼你翻得懂，對方還是看不懂；一張表比較內建翻譯、切 App、群組翻譯機器人。<a href="#limits">看限制與比較表 ↓</a></li>
+<li><strong>決定什麼時候該換做法</strong>：偶爾一句用內建就好；每天要溝通的看護、移工、同事，把翻譯放進群組比較順，附可直接傳的中文訊息。<a href="#which">看判斷方法 ↓</a>　<a href="#faq">看常見問題 ↓</a></li>
+</ul>
+<p>群組自動翻譯的做法是：把翻譯小幫手加進 LINE 群組，大家各打各的母語，譯文自動出現在對話裡，對方不用下載、不用設定。</p>
+</div>
+</div>
+</section>
+
+<!-- 內建翻譯有哪幾種 -->
+<section id="builtin" style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
+<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
+<div class="section-label">內 建 翻 譯 有 哪 幾 種</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">LINE 內建翻譯怎麼用？三種官方功能＋兩種常被誤認的做法</h2>
+<p class="section-text">LINE 官方說明中心（2026-11-16 查證）列出的翻譯相關功能有三種：電腦版的右鍵翻譯訊息、手機版的圖片「轉為文字」翻譯、LINE 社群的自動程式翻譯。另外有兩種做法常被當成「LINE 內建」，其實不是，一併整理在後面。</p>
+
+<div class="step-box">
+<div class="num">做法 01</div>
+<h3>電腦版：在訊息上按右鍵 →「翻譯」</h3>
+<p>適用 Windows／Mac 電腦版 LINE。打開聊天室，在想翻譯的那則訊息上按滑鼠右鍵，選「翻譯」；左邊的下拉選單選原文語言（或選「偵測語言」讓它自動判斷），右邊選要翻成的語言。官方列出可互譯的語言包含繁體中文、簡體中文、英文、日文、韓文、泰文、印尼文、越南文、西班牙文、葡萄牙文、德文、俄文、阿拉伯文、印地文、波斯文、緬甸文，實際可選的目標語言會依原文語言而不同；菲律賓文沒有列在清單上。譯文顯示在你自己的畫面上，不會傳給對方。</p>
+</div>
+
+<div class="step-box">
+<div class="num">做法 02</div>
+<h3>手機版：照片或圖片的「轉為文字」→ 翻譯</h3>
+<p>手機版 LINE 可以把聊天室裡的照片或圖片（例如藥袋、宿舍公告、菜單）轉成文字，再點「翻譯」。操作是：打開圖片 → 點「轉為文字」→ 用手指調整要辨識的範圍 → 在結果畫面下方切換語言，也可以複製或分享辨識出來的文字。可翻的目標語言包含繁體中文、英文、日文、韓文、泰文、印尼文、越南文等，實際可選項目依圖片原文語言而異。要注意，這是翻「圖片裡的字」，不是翻聊天室裡的文字訊息；字體花俏、字大小不一的圖片，辨識結果可能有誤。</p>
+</div>
+
+<div class="step-box">
+<div class="num">做法 03</div>
+<h3>LINE 社群（OpenChat）：管理員開啟「自動程式」的翻譯</h3>
+<p>LINE 社群和一般群組是兩種東西。社群的管理員可以在社群設定的「自動程式」裡開啟翻譯，選擇要翻譯的語言，並套用給所有成員。但一般的 LINE 群組（你和家人、看護、同事那種）沒有這個選項。反過來說，LINE 社群也無法邀請翻譯機器人這類 LINE 官方帳號加入，所以兩邊的做法剛好相反：社群用內建自動程式，一般群組要加翻譯機器人。</p>
+</div>
+
+<div class="step-box">
+<div class="num">常被誤認 04</div>
+<h3>手機長按訊息的「翻譯」：多半是手機系統或鍵盤的功能</h3>
+<p>不少人在手機上長按 LINE 訊息會看到「翻譯」，就以為是 LINE 內建。在 LINE 官方說明中心（2026-11-16 查證）裡，手機版聊天訊息並沒有列出長按翻譯的說明；你看到的「翻譯」，常見的是 iOS 選取文字後的系統翻譯、Android 的 Google 翻譯「輕觸翻譯」，或是手機鍵盤附的翻譯功能。這些工具確實能用，只是不是每支手機都有、介面各家不同，支援的語言也依手機而異，而且譯文一樣只有你自己看得到。請以你手機上實際顯示的選單為準。</p>
+</div>
+
+<div class="step-box">
+<div class="num">常被誤認 05</div>
+<h3>LINE 官方翻譯帳號：一個帳號只翻一組語言</h3>
+<p>早年 LINE 推出過幾個官方翻譯帳號（例如中日、中英、中韓翻譯），加為好友後把它拉進聊天室，或直接傳訊息給它，就會回你譯文。限制是一個帳號只翻一組語言，而且以日文、英文、韓文為主；台灣家庭與工廠常用到的印尼文、越南文、泰文、菲律賓文，多半不在清單上。這些帳號目前是否還搜尋得到、是否正常運作，請以 LINE 內的搜尋結果為準。</p>
+</div>
+</div>
+</section>
+
+<!-- 限制與比較 -->
+<section id="limits" style="padding:72px 0;max-width:900px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="section-label">限 制 在 哪</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">長按翻譯、右鍵翻譯的四個限制：你看懂了，對方還是看不懂</h2>
+<p class="section-text">不論是電腦版右鍵、手機系統的長按翻譯，還是圖片「轉為文字」，這一類「內建翻譯」的本質都一樣：<strong>一次翻一句、翻給自己看</strong>。用在偶爾看一句很方便，用在每天要溝通的對象，會碰到四個限制。</p>
+
+<div class="method-card">
+<h3>限制一：譯文只有你看得到，對方那邊什麼都沒有</h3>
+<p>你把看護傳來的印尼文翻成中文、看懂了；但你回的中文，對方畫面上還是中文。要讓對方看懂，你得先把中文翻成印尼文，再複製、貼回聊天室傳送。一來一回，每句話都要多做兩三個動作。</p>
+</div>
+<div class="method-card">
+<h3>限制二：每一句都要手動操作</h3>
+<p>一天幾句還好；每天要交代作息、用藥、排班、請假，每一句都要右鍵或長按一次，對話的節奏會一直斷掉。更常見的結果是，大家開始只講「最少的話」，該講清楚的事反而沒講。</p>
+</div>
+<div class="method-card">
+<h3>限制三：群組裡每個人要各自翻</h3>
+<p>群組裡有家人、看護、仲介時，每個人都得自己翻看不懂的訊息。長輩和剛來台灣的看護通常不會操作這些選單，結果還是「已讀，但沒讀懂」。重要的事（回診時間、藥怎麼吃、哪天休假）最怕這種狀況。</p>
+</div>
+<div class="method-card">
+<h3>限制四：手機上不一定有，電腦版才完整</h3>
+<p>LINE 官方說明裡完整的「翻譯聊天訊息」是電腦版功能；手機上要靠系統或鍵盤的翻譯，介面與語言支援依手機而異。而看護、移工幾乎都只用手機，等於對方那一端最缺的，正好是這個功能。</p>
+</div>
+
+<div class="compare-wrap">
+<table class="compare">
+<thead><tr><th>做法</th><th>譯文誰看得到</th><th>要不要每句手動</th><th>印尼／越南／泰／菲律賓文</th><th>群組裡每個人都看得懂？</th><th>適合</th></tr></thead>
+<tbody>
+<tr><td>LINE 電腦版右鍵翻譯</td><td>只有自己</td><td class="no">每句都要</td><td>印尼、越南、泰文有；菲律賓文未列在官方清單</td><td class="no">✕ 各自翻</td><td>在電腦前偶爾看一句</td></tr>
+<tr><td>手機長按翻譯（系統／鍵盤）</td><td>只有自己</td><td class="no">每句都要</td><td>依手機而異</td><td class="no">✕ 各自翻</td><td>偶爾看一句</td></tr>
+<tr><td>圖片「轉為文字」</td><td>只有自己</td><td class="no">每張都要</td><td>印尼、越南、泰文有</td><td class="no">✕ 各自翻</td><td>藥袋、公告、菜單的照片</td></tr>
+<tr><td>切翻譯 App（Google 翻譯、ChatGPT）</td><td>只有自己</td><td class="no">每句都要複製貼上</td><td>有</td><td class="no">✕ 各自翻</td><td>偶爾翻一句</td></tr>
+<tr><td>群組翻譯機器人（例如翻譯小幫手）</td><td>群組裡所有人</td><td class="yes">✓ 自動</td><td>翻譯小幫手：繁中、印尼、越南、泰、菲律賓、英文</td><td class="yes">✓ 同一則訊息大家都看到譯文</td><td>每天要溝通的看護、移工、同事</td></tr>
+</tbody>
+</table>
+</div>
+<p class="section-text" style="font-size:16px">表格依 LINE 官方說明中心 2026-11-16 的內容整理；功能與語言支援可能隨版本更新，以 LINE 最新說明為準。</p>
+</div>
+</section>
+
+<!-- 什麼時候用哪一種 -->
+<section id="which" style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
+<div style="max-width:900px;margin:0 auto;padding:0 40px" class="rwd-inner">
+<div class="section-label">怎 麼 選</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">什麼時候用內建翻譯就好，什麼時候該把翻譯放進群組？</h2>
+<p class="section-text">判斷方法很簡單：這個人，你一個星期要跟他講幾次話？</p>
+
+<div class="step-box">
+<div class="num">情況 A</div>
+<h3>偶爾一句：用內建翻譯就好</h3>
+<p>收到一則看不懂的訊息、想看一張藥袋或公告的照片、出國時問民宿老闆一個問題。右鍵或長按翻一下、拍張照轉成文字，不用加任何東西，也不用對方配合。</p>
+</div>
+
+<div class="step-box">
+<div class="num">情況 B</div>
+<h3>每天都要講：把翻譯放進群組</h3>
+<p>家裡的外籍看護、工廠的移工、店裡的外籍員工，每天要交代作息、用藥、排班、請假，而且你會希望對方能用母語回問。這時候需要的不是「你看得懂」，而是「雙方都看得懂、都敢開口」。做法是把翻譯機器人當成一位成員邀請進 LINE 群組，之後你打中文，對方看到自己的母語；對方用母語回，你看到中文，兩邊都不用再多做任何一步。</p>
+</div>
+
+<div class="step-box">
+<div class="num">翻譯小幫手</div>
+<h3>群組自動翻譯是這樣用的</h3>
+<p>加翻譯小幫手為 LINE 好友 → 邀請進你們的群組 → 雙方各傳一句完整的母語訊息，語言會自動認得，之後每則訊息的譯文都直接出現在對話裡。支援繁體中文、印尼語、越南語、泰語、菲律賓語、英文，也能翻譯日文、韓文等語言；同一個群組同時有越南、印尼、泰國籍成員時，一句中文可以同時翻成多種語言。對方不用下載 App、不用註冊、不用設定，只要會用 LINE 傳訊息。每個群組終身共 50 則免費翻譯（不會每日或每月重置），覺得好用再看<a href="pricing.html#pricing" style="color:#1a5c3f">方案與價格</a>。兩個提醒：LINE 社群（OpenChat）無法加入機器人，請用一般群組；貼圖與照片不翻譯，重要內容請直接打字。完整步驟見 <a href="line-translation-guide.html#setup" style="color:#1a5c3f">3 步加入群組教學</a>。</p>
+</div>
+
+<div class="step-box">
+<div class="num">並用</div>
+<h3>兩種做法不衝突，內建翻譯當輔助</h3>
+<p>加了群組翻譯之後，內建翻譯還是有用處：看護傳藥袋、公告的照片時，用手機的「轉為文字」看圖片上的字；在電腦前想對照某一句的譯文怎麼翻，也可以右鍵再翻一次。群組翻譯負責日常對話，內建翻譯處理照片和偶爾的對照。</p>
+</div>
+</div>
+</section>
+
+<!-- 可複製句型 -->
+<section id="messages" style="padding:72px 0;max-width:900px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="section-label">可 複 製 句 型</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 24px;letter-spacing:-0.01em">從「自己翻給自己看」換成群組翻譯時，可以直接傳的訊息</h2>
+<p class="section-text">下面的訊息用中文打就好，翻譯小幫手會自動翻成對方的語言。長按文字即可複製。</p>
+<div class="msg-box">
+<div class="msg-label">① 跟看護／移工說明為什麼換做法</div>
+<div class="msg-text">之前我都是自己翻譯妳的訊息，但我回的中文妳看不懂。我把翻譯小幫手加進群組了，之後妳用自己的語言打字就好，我會看到中文；我打中文，妳也會看到妳的語言。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">② 請對方先回一句母語，讓系統認得語言</div>
+<div class="msg-text">可以先用妳的語言回我一句話嗎？什麼都可以，例如今天過得怎麼樣。這樣翻譯才認得妳的語言。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">③ 提醒照片裡的字不會翻</div>
+<div class="msg-text">照片和貼圖不會翻譯。重要的事（時間、數量、藥怎麼吃）請直接打字，我這邊才看得到翻譯。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">④ 譯文看不懂時怎麼辦</div>
+<div class="msg-text">翻譯有時候會不太一樣。如果有哪一句看不懂，請直接跟我說，我換另一種說法再講一次。</div>
+</div>
+<div class="msg-box">
+<div class="msg-label">⑤ 跟家人說明（傳在家人群組）</div>
+<div class="msg-text">我把翻譯機器人加進群組了，大家照常打中文就好，不用再自己翻、再貼過去。看護回的話也會直接出現中文。</div>
+</div>
+
+<div class="demo-chat">
+<div class="demo-label">示範・中文 ↔ 印尼文</div>
+<div class="line"><div class="who">女兒</div><div class="orig">明天早上 8 點要出門，請 7 點半叫阿公起床。</div><div class="tr">Besok pagi berangkat jam 8. Tolong bangunkan Kakek jam 7.30 ya.</div></div>
+<div class="line"><div class="who">看護</div><div class="orig">Baik, Bu. Besok saya bangunkan Kakek jam 7.30.</div><div class="tr">好的，太太。明天我 7 點半叫阿公起床。</div></div>
+<div class="line"><div class="who">女兒</div><div class="orig">謝謝。早餐讓他先吃完再出門。</div><div class="tr">Terima kasih. Biar Kakek sarapan dulu sebelum berangkat ya.</div></div>
+<p class="demo-note">以上為示範對話，實際翻譯會依對話內容略有不同。用內建翻譯的話，這三句每一句都要有人手動翻一次；放在群組裡，雙方各自打字就好。</p>
+</div>
+
+<div style="text-align:center;margin-top:48px">
+<a href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#1a5c3f;color:#ffffff;padding:16px 36px;font-family:'Noto Sans TC',system-ui,sans-serif;font-weight:600;font-size:16px;text-decoration:none;letter-spacing:0.03em">加入 LINE 好友，免費體驗</a>
+<p style="font-size:15px;color:#3a3830;margin-top:12px;font-family:'Noto Sans TC',system-ui,sans-serif">每個群組 50 則免費翻譯・不用下載、不用設定</p>
+</div>
+</div>
+</section>
+
+<div class="tip-box" style="max-width:820px;margin:32px auto">
+<h3>提醒</h3>
+<p>示範對話裡的作息、用藥等照護內容，一律以醫護指示為準；緊急狀況請直接打 119。LINE 內建翻譯的操作方式與支援語言，以 LINE 官方說明中心最新內容為準，本文查證日期 2026-11-16。</p>
+</div>
+
+<!-- FAQ -->
+<section id="faq" style="padding:72px 0;max-width:900px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div class="section-label">常 見 問 題</div>
+<h2 style="font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.3;margin:0 0 16px;letter-spacing:-0.01em">關於 LINE 內建翻譯的常見問題</h2>
+<div class="faq-item">
+<h3>LINE 內建翻譯可以翻印尼文、越南文、泰文嗎？</h3>
+<p>可以，但要看是哪一種。電腦版右鍵翻譯訊息與手機圖片「轉為文字」的官方語言清單都包含印尼文、越南文、泰文；菲律賓文沒有列在清單上。手機上長按訊息看到的翻譯，多半是手機系統或鍵盤提供的，支援語言依手機而異。不論哪一種，譯文都只有你自己看得到。</p>
+</div>
+<div class="faq-item">
+<h3>LINE 長按訊息翻譯，對方看得到譯文嗎？</h3>
+<p>看不到。內建翻譯是把收到的訊息翻給你自己看，對方的畫面不會有任何變化。你回的中文對方一樣看不懂，要先翻成對方的語言、複製貼上再傳送。想讓雙方都直接看到譯文，要把翻譯機器人加進群組。</p>
+</div>
+<div class="faq-item">
+<h3>一般 LINE 群組可以開內建的自動翻譯嗎？</h3>
+<p>目前沒有這個選項。LINE 社群（OpenChat）的管理員可以在「自動程式」設定裡開啟翻譯；一般 LINE 群組沒有，要在群組裡自動翻譯，就要邀請翻譯機器人加入（翻譯小幫手是其中一種）。反過來，LINE 社群無法邀請機器人，所以家人與看護、工廠與移工請用一般群組。</p>
+</div>
+<div class="faq-item" style="border-bottom:none">
+<h3>已經加了翻譯小幫手，還需要用 LINE 內建翻譯嗎？</h3>
+<p>日常對話交給群組翻譯就好。內建翻譯可以當輔助：看護傳藥袋、公告的照片時，用手機的「轉為文字」看圖片上的字（翻譯小幫手不翻譯照片）；在電腦前想對照某一句的譯文，也可以按右鍵再翻一次。兩種做法不衝突。</p>
+</div>
+
+<div class="source-box">
+<strong>資料來源</strong>（查證日期 2026-11-16；以 LINE 官方說明中心最新內容為準）：<br/>
+LINE 官方說明中心：Getting more out of chats（電腦版翻譯聊天訊息的步驟與語言清單，英文）：<a href="https://help.line.me/line/smartphone/sp?contentId=20005810&amp;lang=en" target="_blank" rel="noopener">https://help.line.me/line/smartphone/sp?contentId=20005810&amp;lang=en</a><br/>
+LINE 官方說明中心：轉為文字功能的基本說明：<a href="https://help.line.me/line/?contentId=20013213&amp;lang=zh-Hant" target="_blank" rel="noopener">https://help.line.me/line/?contentId=20013213&amp;lang=zh-Hant</a><br/>
+LINE 官方說明中心：什麼是自動程式（Bot）？（LINE 社群的翻譯設定）：<a href="https://help.line.me/line/smartphone/?contentId=20020103&amp;lang=zh-Hant" target="_blank" rel="noopener">https://help.line.me/line/smartphone/?contentId=20020103&amp;lang=zh-Hant</a>
+</div>
+</div>
+</section>
+
+<!-- 第二個 CTA -->
+<section style="padding:0 0 56px;text-align:center">
+<a href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#1a5c3f;color:#ffffff;padding:16px 36px;font-family:'Noto Sans TC',system-ui,sans-serif;font-weight:600;font-size:16px;text-decoration:none;letter-spacing:0.03em">把翻譯小幫手加進你的群組</a>
+</section>
+
+<!-- 延伸閱讀 -->
+<section style="padding:0 0 64px;max-width:1120px;margin:0 auto">
+<div style="padding:0 40px" class="rwd-inner">
+<div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#1a5c3f;letter-spacing:0.2em;margin-bottom:20px;font-weight:600">延 伸 閱 讀</div>
+<h2 style="font-size:36px;font-weight:700;line-height:1.25;margin-bottom:32px;letter-spacing:-0.01em">你可能也想看</h2>
+<a href="line-translation-guide.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">LINE 群組翻譯機器人怎麼用？3 步加入群組＋不翻譯排查 →</a>
+<a href="line-translation-guide.html#troubleshooting" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">LINE 群組不翻譯怎麼辦？7 項檢查 →</a>
+<a href="guide-choose-line-group-translator.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">LINE 群組翻譯機器人怎麼選？8 個比較重點＋情境建議 →</a>
+<a href="use-cases.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">翻譯小幫手能用在哪裡？看護、幫傭、工廠、旅遊、跨國戀 5 種情境 →</a>
+<a href="guide-caregiver-first-week.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">外籍看護第一天要交代什麼？第一週交接清單＋群組訊息 →</a>
+<a href="pricing.html#pricing" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">翻譯小幫手方案與價格 →</a>
+</div>
+</section>
+
+<footer style="border-top:6px solid #1a5c3f;padding:56px 0 40px;background:#0a0a08;color:#c9c4b2;font-family:'Noto Sans TC', system-ui, sans-serif"><div style="max-width:1120px;margin:0 auto;padding:0 40px"><div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;align-items:start" class="rwd-footer"><div><div style="font-family:'Noto Serif TC', serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:12px;letter-spacing:0.05em">翻譯小幫手</div><div style="font-size:14px;line-height:1.85;color:#9a9485">LINE 群組即時翻譯機器人<br/>支援繁中 / 印尼 / 越南 / 泰 / 菲律賓 / 英文</div></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">服務</div><a href="https://lin.ee/vX3Iv8U" target="_blank" rel="noopener" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">加 LINE 好友</a><a href="pricing.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">方案與價格</a><a href="phrases.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">看護常用句型對照表</a><a href="https://triplehai.com/travel/" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">出國旅遊也能用</a></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">法律</div><a href="terms.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">服務條款</a><a href="privacy.html" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px">隱私權政策</a></div><div><div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.15em;color:#9a9485;margin-bottom:14px;font-weight:600">聯絡</div><a href="mailto:contact@triplehai.com" style="display:block;color:#e0dbc9;text-decoration:none;font-size:15px;margin-bottom:10px;word-break:break-all">contact@triplehai.com</a></div></div><div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#7a7568;letter-spacing:0.05em"><div>© 2026 艾鐸有限公司 · 翻譯小幫手 · 統一編號 62222415</div><div>付款服務由 LINE Pay 與藍新金流提供</div></div></div></footer>
+
+</article>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll('a[href*="lin.ee"], a[href*="liff.line.me"]').forEach(function(el){
+      el.addEventListener("click", function(){
+        gtag("event", "cta_click", {
+          event_category: "engagement",
+          event_label: "add_line_friend",
+          page_title: document.title,
+          src: window.thCta ? thCta.src : 'web',
+          arm: window.thCta ? thCta.arm : 'none'
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>
