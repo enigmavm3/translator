@@ -134,9 +134,9 @@
    ],
    "notes": "",
    "priority": 40,
-   "status": "queued",
+   "status": "published",
    "serp_checked_on": "2026-11-07",
-   "published_at": null,
+   "published_at": "2026-11-19",
    "failed_reason": null,
    "commit": null
   },

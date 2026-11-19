@@ -58,6 +58,7 @@
 - [外籍看護第一天要交代什麼？第一週交接清單＋群組訊息](https://triplehai.com/translator/guide-caregiver-first-week.html)：把看護交接拆成七天，附交接清單與可直接傳到 LINE 群組的中文訊息。
 - [移工宿舍規則怎麼公告？用母語講清楚的寫法＋群組公告範例](https://triplehai.com/translator/guide-factory-dorm-rules.html)：住宿管理規則依規定要以移工易懂文字公告；7 條常見宿舍規則的寫法、可複製的 LINE 群組中文公告、越南文／印尼文／泰文示範對話與確認看懂的 3 個步驟。
 - [LINE 內建翻譯怎麼用？長按翻譯的限制，和群組自動翻譯差在哪](https://triplehai.com/translator/guide-line-builtin-translation.html)：LINE 官方說明中心列出的三種內建翻譯（電腦版右鍵翻譯訊息、手機圖片「轉為文字」、LINE 社群自動程式）操作步驟與語言清單，常被誤認為內建的手機長按翻譯與官方翻譯帳號，四個限制（譯文只有自己看得到、每句手動、群組各自翻、手機版不完整）與比較表，以及什麼時候該改用群組自動翻譯。
+- [外籍幫傭接送小孩要交代什麼？放學接送清單＋群組確認訊息範例](https://triplehai.com/translator/guide-helper-school-pickup.html)：接送前要講清楚的五件事（時間地點、學校交接、路線、回家規矩、狀況處理）、四類交接清單、7 則可直接複製到 LINE 群組的中文訊息，與菲律賓文、印尼文示範對話；附幫傭工作範圍的法規來源。
 
 ## 其他
 
