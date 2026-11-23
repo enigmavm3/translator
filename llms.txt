@@ -26,6 +26,8 @@
 - [工廠與移工的 LINE 群組翻譯](https://triplehai.com/translator/for-factories.html)：給工廠主管、人資、仲介——安全規定、排班加班、宿舍與請假、發薪通知的群組對話示範；可依班別或產線分群，多群組方案請 Email 洽詢
 - [印尼看護常用中文句型對照表](https://triplehai.com/translator/phrases.html)：50 句中文↔印尼語照護現場對照（用藥、照護、排班、就醫、日常）
 - [越南看護常用中文句型對照表](https://triplehai.com/translator/phrases-vi.html)：50 句中文↔越南語照護現場對照
+- [LINE 印尼文翻譯](https://triplehai.com/translator/line-indonesian-translation.html)：在 LINE 群組裡中文↔印尼文自動互譯的 3 步設定、照護／家務／工廠示範對話（情境示意），與時間、休假、飯前飯後的寫法提醒
+- [LINE 越南文翻譯](https://triplehai.com/translator/line-vietnamese-translation.html)：在 LINE 群組裡中文↔越南文自動互譯的 3 步設定、稱呼與聲調提醒，與照護／家務／工廠加班示範對話（情境示意）
 - [泰國看護常用中文句型對照表](https://triplehai.com/translator/phrases-th.html)：50 句中文↔泰語照護現場對照
 - [外籍看護英文怎麼說＋50 句中英對照表](https://triplehai.com/translator/phrases-en.html)：「外籍看護」英文是 foreign caregiver／migrant caregiver（住家看護 live-in caregiver、幫傭 domestic helper），加 50 句中文↔英語照護現場對照，可列印
 
