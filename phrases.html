@@ -95,10 +95,17 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 .copy-btn { display:inline-block; margin-top:10px; font-family:"Noto Sans TC", system-ui, sans-serif; font-style:normal; font-size:14px; padding:5px 12px; border:1px solid #1a5c3f; background:#ffffff; color:#1a5c3f; cursor:pointer; }
 .copy-btn.done { background:#1a5c3f; color:#ffffff; }
 .phrase-card.is-hidden, section.is-filtered-out, .is-searching .tip-box { display:none !important; }
+section[id] { scroll-margin-top:200px; }
 @media (max-width: 768px) {
-  .tool-inner { padding:12px 20px; }
+  .tool-inner { padding:10px 20px; }
+  .tool-label { position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .tool-search { padding:8px 12px; }
+  .tool-chips { flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:8px; padding-bottom:2px; }
+  .tool-chip { flex:0 0 auto; white-space:nowrap; }
+  .tool-count { margin-top:4px; font-size:13px; }
   .tool-empty { padding:0 20px; }
   .tool-chip { font-size:14px; padding:6px 10px; }
+  section[id] { scroll-margin-top:180px; }
   [style*="grid-template-columns:200px 1fr"] { grid-template-columns:1fr !important; gap:12px !important; margin-bottom:28px !important; }
 }
 </style>
@@ -170,7 +177,7 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 </div>
 <div>
 <h2 style="font-size:54px;font-weight:700;line-height:1.25;margin-bottom:16px;letter-spacing:-0.01em">用藥提醒</h2>
-<p style="font-size:22px;color:#3a3830;max-width:580px;line-height:1.8">吃藥時間、劑量、飯前飯後——最容易出錯的指令。</p>
+<p style="font-size:22px;color:#3a3830;max-width:580px;line-height:1.8">吃藥時間、劑量、飯前飯後——最容易出錯的指令。用藥時間與劑量請看藥袋標示，一切以醫護指示為準。</p>
 </div>
 </div>
 
@@ -185,7 +192,7 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 
 <div class="tip-box">
 <h3>小提醒</h3>
-<p>印尼看護常把「飯前」和「飯後」搞混——因為印尼語 sebelum（前）和 sesudah（後）發音很像。建議搭配手勢或在藥袋上標記☀/🌙，減少出錯機率。用藥時間與劑量請看藥袋標示，一切以醫護指示為準。</p>
+<p>印尼看護常把「飯前」和「飯後」搞混——因為印尼語 sebelum（前）和 sesudah（後）發音很像。建議搭配手勢或在藥袋上標記☀/🌙，減少出錯機率。</p>
 </div>
 </div>
 </section>
@@ -449,11 +456,38 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
     if (!b) return;
     cat = b.getAttribute('data-cat');
     Array.prototype.forEach.call(chipsBox.children, function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
-    apply();
+    showChip(b);
+    if (apply()) reveal();
   });
-  input.addEventListener('input', apply);
+  input.addEventListener('input', function () { if (apply()) reveal(); });
+  // 被選中的分類鈕若在橫向捲動列的邊緣，捲進可視範圍（只捲分類列，不動整頁）
+  function showChip(b) {
+    var br = chipsBox.getBoundingClientRect();
+    var cr = b.getBoundingClientRect();
+    if (cr.left < br.left) chipsBox.scrollLeft -= br.left - cr.left + 16;
+    else if (cr.right > br.right) chipsBox.scrollLeft += cr.right - br.right + 16;
+  }
+  // 篩選後，若第一張符合的句卡（或「找不到」訊息）不在畫面上，捲到它剛好位於工具列下方
+  function reveal() {
+    var first = emptyBox.hidden ? document.querySelector('.phrase-card:not(.is-hidden)') : emptyBox;
+    if (!first) return;
+    var r = first.getBoundingClientRect();
+    var toolH = tool.offsetHeight;
+    var vv = window.visualViewport;
+    var bottom = vv ? vv.offsetTop + vv.height : (window.innerHeight || document.documentElement.clientHeight);
+    if (r.top >= toolH && r.top + 48 <= bottom) return;
+    var y = r.top + (window.pageYOffset || document.documentElement.scrollTop || 0) - toolH - 12;
+    window.scrollTo(0, Math.max(0, y));
+  }
+  var lastKey = null;
+  // 回傳 true 代表篩選條件有變（注音組字中、條件沒變時回傳 false，畫面不動）
   function apply() {
-    var terms = fold(input.value).split(/\s+/).filter(Boolean);
+    // 注音輸入法組字中的注音符號與聲調符號不參與比對，避免打字途中閃出「找不到」
+    var q = input.value.replace(/[ㄅ-ㄯㆠ-ㆿˇˉˊˋ˙]/g, '');
+    var terms = fold(q).split(/\s+/).filter(Boolean);
+    var key = cat + '|' + terms.join(' ');
+    if (key === lastKey) return false;
+    lastKey = key;
     var shown = 0;
     sections.forEach(function (sec) {
       var n = 0;
@@ -466,9 +500,10 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
       sec.classList.toggle('is-filtered-out', n === 0);
       shown += n;
     });
-    document.body.classList.toggle('is-searching', terms.length > 0 || cat !== 'all');
+    document.body.classList.toggle('is-searching', terms.length > 0);
     countBox.textContent = (terms.length || cat !== 'all') ? '符合 ' + shown + ' 句（共 ' + cards.length + ' 句）' : '共 ' + cards.length + ' 句，可依分類篩選或輸入關鍵字';
     emptyBox.hidden = shown > 0;
+    return true;
   }
   function copyText(span, btn) {
     var text = (span.textContent || '').trim();
