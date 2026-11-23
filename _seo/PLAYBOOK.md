@@ -14,7 +14,7 @@ repo 沒有 `.nojekyll`，GitHub Pages 會跑 Jekyll，而 Jekyll 預設不輸�
 
 | 檔案 | 用途 |
 |---|---|
-| `_seo/queue.json` | 主題佇列。`pages[]` 每筆有 slug、關鍵字、搜尋意圖、情境、頁型、優先序、狀態、內連目標、預計 title、為什麼有機會、備註 |
+| `_seo/queue.json` | 主題佇列。`pages[]` 每筆有 slug、關鍵字、搜尋意圖、情境、頁型、優先序、狀態、內連目標、預計 title、為什麼有機會、備註，以及選題依據欄位 `evidence`、`evidence_level`、`existing_page`、`why_new_page`（2026-11-24 起，見第 8 節） |
 | `_seo/template.html` | 新頁模板（head 沿用 `line-translation-guide.html`：GA4、Google Ads 轉換監聽器、`cta-ab.js`、canonical、og、三段 JSON-LD；視覺同既有 guide 頁） |
 | `_seo/check.py` | 自動檢查。全部 PASS 才能 push |
 | `_seo/log.jsonl` | 每次執行追加一行 JSON（成功或失敗都要寫） |
@@ -41,7 +41,7 @@ TODAY=$(TZ=Asia/Taipei date +%F); DOW=$(TZ=Asia/Taipei date +%u)   # DOW=1 是�
 同一天已經有一筆 `status=published` 的 log（`grep "\"date\": \"$TODAY\"" _seo/log.jsonl`）→ 不再發，直接結束（避免重跑多發）。
 
 ### 3-2 選題
-讀 `_seo/queue.json`，取 `status == "queued"` 且 `priority` 最小的一筆。沒有 queued → 不發頁，log 記 `{"status":"empty"}`，週一照常寫週報並註明「佇列已空」。
+讀 `_seo/queue.json`，取 `status == "queued"` 且 `priority` 最小的一筆（`paused` 的題目不要碰，也不要改它的 status）。沒有 queued → 不發頁，log 記 `{"status":"empty"}`，週一照常寫週報並註明「佇列已空」。
 把該筆改成 `"status": "in_progress"`（先不 commit）。
 
 ### 3-3 查證（10 分鐘內）
@@ -130,7 +130,8 @@ python3 _seo/check.py <slug> --guard
 - **用法**：加好友 → 邀請進群組 → 雙方各傳一句完整的母語訊息，語言自動認得。不用下載 App、不用註冊、不用設定；對方只要會用 LINE。LINE 社群（OpenChat）不能加機器人；貼圖、照片不翻譯。群組指令：`/stop` 暫停、`/start` 恢復、`/plan` 看方案與用量、`/lang` 改自己的語言。
 - **一句中文可以同時翻成多種語言**（同群有越南、印尼、泰國籍成員時）。
 - **免費**：每個群組終身共 50 則免費翻譯，**不會每日或每月重置**。
-- **價格（盡量少寫，寫了就要照這個格式）**：基本 NT$299／30 天、進階 NT$499／30 天、商用 NT$1,499／30 天；單次購買、不自動扣款。年繳寫「83 折」。語音翻譯：免費體驗與進階、商用方案有，基本方案沒有。詳細一律連 `pricing.html#pricing`。
+- **價格（盡量少寫，寫了就要照這個格式）**：基本 NT$299／30 天、進階 NT$499／30 天、商用 NT$1,499／30 天。年繳寫「83 折」。
+- **付款（2026-11-24 更新，依產品 DECISIONS 2026-11-10）**：預設是單次付款（30 天到期後自己續購），也可以選「信用卡每 30 天自動扣款」（金額同單次價、可隨時在一對一「我的群組」→管理訂閱取消、取消後用到到期日不退款）。**要寫付款就兩種並列**，例如「可單次付款，也可選信用卡每 30 天自動扣款」。LINE Pay、年繳、加值包只有單次付款。付款方式可寫 LINE Pay、信用卡、ATM、超商代碼繳費。不寫：訂閱制、自動續約、定期定額、扣款前提醒、暫停／恢復扣款、退款承諾、更改扣款日、手續費。語音翻譯：免費體驗與進階、商用方案有，基本方案沒有。詳細一律連 `pricing.html#pricing`。
 - **多群組／工廠／仲介**：一律寫「多群組使用歡迎來信 contact@triplehai.com 洽詢」，不寫任何優惠、合作方案或報價。
 - **可以講的價值**：省去複製貼上、雙方用最熟悉的語言說、重要的事寫清楚少誤會、對方敢用母語發問、針對台灣照護現場用詞（排班、量血壓、藥袋、加班費）做過調校、會參考對話前後文。
 - **不講**：技術（用什麼模型、怎麼做）、隱私與資料保存細節、準確率、用戶數、任何沒有出處的數字。
@@ -147,7 +148,7 @@ python3 _seo/check.py <slug> --guard
 
 ### 5-2 文案紅線（`check.py` 會 grep，但人也要守）
 - 價格寫「/30 天」，**不寫「/月」「月費」「每月 NT$」**；年繳寫「83 折」，不寫「省 2 個月」。
-- 不寫「自動扣款」「訂閱制」「自動續約」（「不自動扣款」可以）。
+- 不寫「訂閱制」「自動續約」「定期定額」。「自動扣款」只能寫成「信用卡每 30 天自動扣款」，而且同一頁要有「單次付款／單次購買」並列（「不自動扣款」也可以）。
 - **不承諾額度重置**（只能寫「不會重置」）。
 - 不寫「做 bot 三年」、「數十種」「一百多種」語言。
 - 不寫「最好」「唯一」「最佳」「最強」「最準」「第一名」；建議句改用「建議」「比較好的做法是」。
@@ -174,6 +175,23 @@ python3 _seo/check.py <slug> --guard
 
 - 改發布順序：改 `queue.json` 的 `priority`（小的先發）。
 - 暫停：在 claude.ai/code/routines 停用排程，或把所有 queued 改成 `skipped`。
-- 加題：照現有欄位新增一筆 `status: "queued"`；新題要先查過 Google 台灣第一頁，填 `why_opportunity` 與 `serp_checked_on`。
+- 加題：照現有欄位新增一筆 `status: "queued"`，並照第 8 節填選題依據；新題要先查過 Google 台灣第一頁，填 `why_opportunity` 與 `serp_checked_on`。
+- 暫停某題：`status` 改 `paused`，`paused_reason` 寫原因（不要刪題）。排程只取 `queued`，`paused` 不會被發。
 - `update_existing` 是「與既有頁相近、應該改既有頁」的題目，**本流程不做**，由人或互動 session 處理。
 - 改紅線或檢查規則：`check.py` 與本檔第 5 節一起改。
+
+## 8. 選題規則（2026-11-24 起；依 `翻譯小幫手_行銷/outputs/SEO診斷_2026-11-24/SEO改善計畫_2026-11-24.md`）
+
+背景：11/16–11/22 產品站一週 20 次點擊；申請指南類頁平均排名 60 名以後（對手是政府網站），有加好友轉換的字是「line 翻譯 機器人」「line 翻譯 印尼」這類 LINE 操作字。篇數與字數不是成效指標。
+
+1. **每一題都要填選題依據**（`queue.json` 欄位）：
+   - `evidence`：依據的搜尋字詞清單，每筆 `{"term": 字詞, "source": "Google Ads 搜尋字詞｜Search Console 查詢｜Google 第一頁實查", "period": 資料期間或查證日期, "metric": 曝光／點擊／轉換或名次}`。
+   - `evidence_level`：`ads_gsc`（有 Ads 搜尋字詞或 GSC 查詢數字）或 `serp_only`（只有第一頁實查，需求量未驗證）。
+   - `search_intent`：搜尋的人想完成什麼事。
+   - `existing_page`：站上是否已有承接這組字的頁（填檔名；沒有填 `null`）。
+   - `why_new_page`：為什麼不能併進既有頁、需要新開一頁（任務不同在哪裡）。
+2. **同義字不另開頁**：「line 自動翻譯」「line 即時翻譯」「line 翻譯 機器人」這類同一件事的不同說法，一律更新既有主頁（例如 `line-translation-guide.html`），放進 `update_existing`，不新增 `pages[]`。`existing_page` 已有承接頁、又說不出不同任務的題目，不要加。
+3. **申請指南類暫停新增**：外籍看護／幫傭的申請資格、流程、文件、費用這類題目（第一頁是政府網站）不再加新題；佇列裡若有，標 `paused` 並寫 `paused_reason`，不要刪。既有申請頁等 56 天資料再決定合併。
+4. **排序**：LINE 操作（群組設定、群組管理、翻譯使用）與照護溝通（交辦、回報、就醫、休假的溝通）排前面；`ads_gsc` 先於 `serp_only`；有季節時效的題目可往前排並在 `notes` 寫時限。旅遊、跨國戀愛等非核心題排最後。
+5. **付款與價格**：照第 4 節「付款」的並列寫法；價格一律「/30 天」，不承諾額度重置。
+

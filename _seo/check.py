@@ -42,7 +42,7 @@ NEG_WINDOW = re.compile(r"不是|並非|不|非|沒有|沒|無|免|未")
 REDLINES: list[tuple[str, str, str]] = [
     ("價格寫月", r"(NT\$\s?[\d,]+|[\d,]+\s*元)\s*[/／]\s*(每\s*)?月|包月|每月\s*NT\$|[/／]\s*月\b", "價格一律寫「/30 天」"),
     ("年繳說法", r"省\s*[2兩二]\s*個月|10\s*個月價", "年繳只能寫「83 折」"),
-    ("訂閱自動扣款", NEG + r"(自動扣款|自動續約|自動續訂|定期定額|訂閱制)", "不可寫自動扣款／訂閱制（「不自動扣款」可以）"),
+    ("訂閱自動扣款", NEG + r"(自動續約|自動續訂|定期定額|訂閱制)", "不可寫訂閱制／自動續約／定期定額"),
     ("三年經驗", r"三年.{0,8}(bot|機器人|翻譯)|(bot|機器人|翻譯).{0,8}三年", "不可宣稱做 bot 三年"),
     ("語言數量誇大", r"(數十|幾十|上百|一百多|百多|近百|\d{2,3}\s*[多餘+]?\s*)種\s*語|\d{2,3}\s*[多餘+]?\s*國\s*語", "只寫主力六語＋「也能翻日文、韓文等」"),
     ("絕對用語", r"最好|唯一|最佳|最強|最便宜|第一名|No\.?\s?1|最高品質|最準", "不寫最好／唯一／最佳等"),
@@ -232,6 +232,17 @@ def check_redlines(r: Report, p: Page) -> None:
                 i = corpus.find(f)
                 ctx.append(corpus[max(0, i - 12): i + len(f) + 12].strip())
             r.fail(f"紅線：{name}", f"{why}；命中 {found[:5]}；上下文 {ctx}")
+    # 自動扣款（2026-11-24 起，產品 2026-11-10 開放）：頁面上要有「每 30 天自動扣款」的完整說法，且並列單次付款
+    autopay = [m for m in re.finditer(r"自動扣款", corpus)
+               if not NEG_WINDOW.search(corpus[max(0, m.start() - 4): m.start()])]
+    if autopay:
+        if not re.search(r"每\s*30\s*天(的)?自動扣款", corpus):
+            hits += 1
+            m = autopay[0]
+            r.fail("紅線：自動扣款寫法", f"提到自動扣款，頁面上至少要有一處完整寫成「信用卡每 30 天自動扣款」；上下文 {corpus[max(0, m.start() - 16): m.end() + 8]!r}")
+        elif not re.search(r"單次(付款|購買)", corpus):
+            hits += 1
+            r.fail("紅線：自動扣款寫法", "寫了每 30 天自動扣款，同一頁也要寫「單次付款／單次購買」並列")
     for m in re.finditer(r"重置|重新計算|歸零", corpus):
         before = corpus[max(0, m.start() - 12): m.start()]
         if not re.search(r"不會|不再|不|沒有|無法", before):
