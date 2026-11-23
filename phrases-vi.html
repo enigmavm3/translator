@@ -12,10 +12,10 @@
   gtag("config", "AW-18387420345");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>越南看護常用中文 50 句｜越南文翻譯對照＋LINE 群組自動翻譯｜翻譯小幫手</title>
-<meta name="description" content="台灣雇主跟越南看護最常講的 50 句中文附越南文：用藥、翻身、排休、回診，以及在 LINE 群組交辦與回報的句子。可複製、可列印貼冰箱；把翻譯小幫手加進 LINE 群組，中文還能自動翻成越南文。">
-<meta property="og:title" content="越南看護常用中文 50 句｜越南文翻譯對照＋LINE 群組自動翻譯">
-<meta property="og:description" content="量血壓、餵藥、排班、就醫、群組交辦——台灣雇主與越南看護最常用的 50 句中文↔越南文對照。">
+<title>越南看護常用中文 50 句｜可搜尋、一鍵複製的越南文對照表｜翻譯小幫手</title>
+<meta name="description" content="台灣雇主最常對越南看護說的 50 句中文，附越南文：用藥、照護、排休、就醫、LINE 群組交辦。打中文關鍵字馬上找到句子、按分類篩選，每句一鍵複製越南文傳 LINE，可列印。">
+<meta property="og:title" content="越南看護常用中文 50 句｜可搜尋、一鍵複製的越南文對照表">
+<meta property="og:description" content="50 句中文↔越南文照護對照：打關鍵字就找到、按一下就複製到 LINE，也能列印。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://triplehai.com/translator/phrases-vi.html">
 <link rel="canonical" href="https://triplehai.com/translator/phrases-vi.html">
@@ -27,8 +27,8 @@
 <meta property="og:image:width" content="1672">
 <meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="越南看護常用中文 50 句｜越南文翻譯對照＋LINE 群組自動翻譯">
-<meta name="twitter:description" content="量血壓、餵藥、排班、就醫、群組交辦——台灣雇主與越南看護最常用的 50 句中文↔越南文對照。">
+<meta name="twitter:title" content="越南看護常用中文 50 句｜可搜尋、一鍵複製的越南文對照表">
+<meta name="twitter:description" content="50 句中文↔越南文照護對照：打關鍵字就找到、按一下就複製到 LINE，也能列印。">
 <meta name="twitter:image" content="https://triplehai.com/translator/images/after.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,6 +66,7 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 }
 
 @media print{
+  .tool-bar,.tool-empty,.copy-btn{display:none !important}
   header, footer, .no-print{display:none !important}
   body, article{background:#fff !important;color:#000 !important}
   section{padding:12px 0 !important;border:0 !important;page-break-inside:auto}
@@ -78,9 +79,30 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
   .phrase-card .note{display:none !important}
   .rwd-inner{padding:0 !important}
 }
+/* 句型搜尋／分類／複製（2026-11-24；純前端，不送出任何輸入） */
+.tool-bar { position:sticky; top:0; z-index:5; background:#fbf7ea; border-bottom:1px solid #b8ad8c; box-shadow:0 2px 8px rgba(10,10,8,0.06); }
+.tool-bar[hidden] { display:none !important; }
+.tool-inner { max-width:1120px; margin:0 auto; padding:14px 40px; font-family:"Noto Sans TC", system-ui, sans-serif; }
+.tool-label { display:block; font-size:14px; font-weight:700; color:#1a5c3f; margin-bottom:6px; }
+.tool-search { width:100%; font-size:18px; padding:10px 14px; border:2px solid #1a5c3f; background:#ffffff; color:#0a0a08; border-radius:0; font-family:inherit; -webkit-appearance:none; appearance:none; }
+.tool-search:focus { outline:3px solid #c4963c; outline-offset:1px; }
+.tool-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.tool-chip { font-family:inherit; font-size:15px; padding:6px 12px; border:1px solid #1a5c3f; background:#ffffff; color:#1a5c3f; cursor:pointer; line-height:1.4; }
+.tool-chip[aria-pressed="true"] { background:#1a5c3f; color:#ffffff; }
+.tool-count { font-size:14px; color:#3a3830; margin-top:8px; }
+.tool-empty { max-width:1120px; margin:24px auto; padding:0 40px; font-family:"Noto Sans TC", system-ui, sans-serif; font-size:18px; color:#3a3830; }
+.copy-btn { display:inline-block; margin-top:10px; font-family:"Noto Sans TC", system-ui, sans-serif; font-style:normal; font-size:14px; padding:5px 12px; border:1px solid #1a5c3f; background:#ffffff; color:#1a5c3f; cursor:pointer; }
+.copy-btn.done { background:#1a5c3f; color:#ffffff; }
+.phrase-card.is-hidden, section.is-filtered-out, .is-searching .tip-box { display:none !important; }
+@media (max-width: 768px) {
+  .tool-inner { padding:12px 20px; }
+  .tool-empty { padding:0 20px; }
+  .tool-chip { font-size:14px; padding:6px 10px; }
+  [style*="grid-template-columns:200px 1fr"] { grid-template-columns:1fr !important; gap:12px !important; margin-bottom:28px !important; }
+}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "越南看護常用中文 50 句｜越南文翻譯對照＋LINE 群組自動翻譯", "description": "台灣雇主與越南看護最常用的 50 句中文—越南語對照，含 LINE 群組交辦與回報句，以及把翻譯機器人加進群組自動翻譯的方法", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-05-15", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/phrases-vi.html"}, "image": "https://triplehai.com/translator/images/after.png", "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
+{"@context": "https://schema.org", "@type": "Article", "headline": "越南看護常用中文 50 句｜可搜尋、一鍵複製的越南文對照表", "description": "台灣雇主與越南看護最常用的 50 句中文—越南語對照，含 LINE 群組交辦與回報句，以及把翻譯機器人加進群組自動翻譯的方法；可搜尋、分類篩選、一鍵複製", "author": {"@type": "Organization", "name": "艾鐸有限公司"}, "datePublished": "2026-05-15", "dateModified": "2026-11-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://triplehai.com/translator/phrases-vi.html"}, "image": "https://triplehai.com/translator/images/after.png", "inLanguage": "zh-TW", "publisher": {"@type": "Organization", "name": "艾鐸有限公司", "logo": {"@type": "ImageObject", "url": "https://triplehai.com/translator/icon_t.png"}}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "翻譯小幫手", "item": "https://triplehai.com/translator/"}, {"@type": "ListItem", "position": 2, "name": "越南看護常用中文 50 句（越南文對照）", "item": "https://triplehai.com/translator/phrases-vi.html"}]}
@@ -116,13 +138,24 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <h2>這頁可以怎麼用？</h2>
 <ol>
 <li><strong>印出來貼著</strong>：按上方「列印」，貼在冰箱或藥櫃旁，看護對照越南文就看得懂。</li>
-<li><strong>複製傳到 LINE</strong>：每句的越南文可以直接複製，貼到你和看護的聊天或群組。</li>
+<li><strong>搜尋、複製傳到 LINE</strong>：在下方搜尋框輸入中文關鍵字（例如「排休」），或點分類快速篩選；每句越南文旁有「複製」鍵，按一下就能貼到你和看護的聊天或群組。</li>
 <li><strong>不想每句複製貼上</strong>：把翻譯小幫手加進你和看護的 LINE 群組，你打中文，看護直接看到越南文；看護用越南文回，你看到中文。3 步驟設定見<a href="line-translation-guide.html#setup">LINE 群組翻譯教學</a>。</li>
 </ol>
 <p>在群組裡交代事情、請看護回報的句子，整理在最後的 <a href="#group">PART 06</a>。</p>
 </div>
 </div>
 </section>
+
+<!-- 句型搜尋與分類（JS 啟用後才顯示；關掉 JS 時下方句子照常可讀） -->
+<div id="phrase-tool" class="tool-bar no-print" data-lang="越南文" hidden>
+<div class="tool-inner">
+<label class="tool-label" for="phrase-q">搜尋句子（輸入中文或越南文關鍵字）</label>
+<input id="phrase-q" class="tool-search" type="search" placeholder="例如：血壓、排休、洗澡、thuốc" autocomplete="off" enterkeyhint="search">
+<div class="tool-chips" role="group" aria-label="分類快篩"></div>
+<div class="tool-count" aria-live="polite"></div>
+</div>
+</div>
+<p id="phrase-empty" class="tool-empty no-print" hidden>找不到符合的句子。換個關鍵字試試，或<a href="line-translation-guide.html#setup" style="color:#1a5c3f">把翻譯小幫手加進 LINE 群組</a>，直接打中文就會自動翻譯。</p>
 
 <!-- PART 01 用藥 -->
 <section style="background:#ffffff;border-top:1px solid #b8ad8c;border-bottom:1px solid #b8ad8c;padding:72px 0">
@@ -139,7 +172,7 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <div class="phrase-card"><div class="zh">吃藥前先量血壓</div><div class="tl">Trước khi uống thuốc, đo huyết áp trước<div class="note">▸ 量血壓 = đo huyết áp</div></div></div>
 <div class="phrase-card"><div class="zh">藥袋上面有寫怎麼吃，看不懂跟我說</div><div class="tl">Trên túi thuốc có ghi cách uống, nếu không hiểu thì nói cho tôi<div class="note">▸ 藥袋 = túi thuốc</div></div></div>
 <div class="phrase-card"><div class="zh">胃藥要飯前半小時吃</div><div class="tl">Thuốc dạ dày uống nửa tiếng trước khi ăn<div class="note">▸ 飯前 = trước khi ăn</div></div></div>
-<div class="tip-box"><h3>小提醒</h3><p>越南語的「trước」（前）和「sau」（後）比較容易分辨，但很多越南看護剛來台灣時，聽不懂中文的「前」和「後」。建議用 LINE 傳文字訊息，搭配翻譯小幫手自動翻成越南語，看護可以反覆確認。</p></div>
+<div class="tip-box"><h3>小提醒</h3><p>越南語的「trước」（前）和「sau」（後）比較容易分辨，但很多越南看護剛來台灣時，聽不懂中文的「前」和「後」。建議用 LINE 傳文字訊息，搭配翻譯小幫手自動翻成越南語，看護可以反覆確認。用藥時間與劑量請看藥袋標示，一切以醫護指示為準。</p></div>
 </div></section>
 
 <!-- PART 02 日常照護 -->
@@ -244,7 +277,7 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
 <a href="phrases.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">印尼看護句型對照表 →</a>
 <a href="phrases-th.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">泰國看護句型對照表 →</a>
 <a href="phrases-en.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">中英看護句型對照表 →</a>
-<a href="case-schedule.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">真實故事：「排休」被誤解成解僱 →</a>
+<a href="case-schedule.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">示範情境：「排休」被誤解成解僱 →</a>
 <a href="case-emergency.html" style="display:block;padding:16px 20px;background:#ffffff;margin-bottom:8px;text-decoration:none;color:#0a0a08;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #1a5c3f;transition:background 0.2s">示範情境：長輩半夜不舒服，看護在群組回報（越南文）→</a>
 
 <a href="./" style="display:block;padding:16px 20px;background:#fbf7ea;margin-bottom:8px;text-decoration:none;color:#1a5c3f;font-size:18px;font-family:'Noto Sans TC', system-ui, sans-serif;border-left:4px solid #b8ad8c;font-weight:600">← 回到翻譯小幫手首頁</a>
@@ -277,6 +310,122 @@ html, body { margin:0; padding:0; background:#fbf7ea; }
       });
     });
   });
+</script>
+<script>
+/* 句型搜尋／分類快篩／一鍵複製（2026-11-24）。純前端：輸入內容只在這個頁面比對，不送出、不記錄。 */
+(function () {
+  var tool = document.getElementById('phrase-tool');
+  if (!tool || !document.querySelectorAll) return;
+  var lang = tool.getAttribute('data-lang') || '';
+  var input = document.getElementById('phrase-q');
+  var chipsBox = tool.querySelector('.tool-chips');
+  var countBox = tool.querySelector('.tool-count');
+  var emptyBox = document.getElementById('phrase-empty');
+  // 比對時忽略大小寫與越南文聲調符號（打 thuoc 也找得到 thuốc）
+  function fold(t) {
+    t = String(t).toLowerCase();
+    if (t.normalize) t = t.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return t.replace(/đ/g, 'd');
+  }
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.phrase-card'));
+  var sections = [];
+  cards.forEach(function (card) {
+    var sec = card.closest('section');
+    if (sec && sections.indexOf(sec) < 0) sections.push(sec);
+    var fx = card.children[1];
+    if (!fx) return;
+    // 把外語句子包成 span（不含 ▸ 註解），複製時只取這段
+    var span = document.createElement('span');
+    span.className = 'fx-text';
+    while (fx.firstChild && !(fx.firstChild.nodeType === 1 && fx.firstChild.classList.contains('note'))) {
+      span.appendChild(fx.firstChild);
+    }
+    fx.insertBefore(span, fx.firstChild);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.textContent = '複製' + lang;
+    btn.setAttribute('aria-label', '複製這句' + lang + '：' + (card.children[0] ? card.children[0].textContent : ''));
+    btn.addEventListener('click', function () { copyText(span, btn); });
+    fx.appendChild(btn);
+    card._text = fold((card.textContent || '').replace(btn.textContent, ''));
+  });
+  sections.forEach(function (sec, i) {
+    var h2 = sec.querySelector('h2');
+    sec._cat = 'c' + i;
+    var chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'tool-chip';
+    chip.setAttribute('data-cat', sec._cat);
+    chip.setAttribute('aria-pressed', 'false');
+    chip.textContent = h2 ? h2.textContent.trim() : '第 ' + (i + 1) + ' 類';
+    chipsBox.appendChild(chip);
+  });
+  var all = document.createElement('button');
+  all.type = 'button';
+  all.className = 'tool-chip';
+  all.setAttribute('data-cat', 'all');
+  all.setAttribute('aria-pressed', 'true');
+  all.textContent = '全部';
+  chipsBox.insertBefore(all, chipsBox.firstChild);
+  var cat = 'all';
+  chipsBox.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.tool-chip') : null;
+    if (!b) return;
+    cat = b.getAttribute('data-cat');
+    Array.prototype.forEach.call(chipsBox.children, function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
+    apply();
+  });
+  input.addEventListener('input', apply);
+  function apply() {
+    var terms = fold(input.value).split(/\s+/).filter(Boolean);
+    var shown = 0;
+    sections.forEach(function (sec) {
+      var n = 0;
+      var inCat = cat === 'all' || sec._cat === cat;
+      Array.prototype.forEach.call(sec.querySelectorAll('.phrase-card'), function (card) {
+        var ok = inCat && terms.every(function (t) { return card._text.indexOf(t) >= 0; });
+        card.classList.toggle('is-hidden', !ok);
+        if (ok) n++;
+      });
+      sec.classList.toggle('is-filtered-out', n === 0);
+      shown += n;
+    });
+    document.body.classList.toggle('is-searching', terms.length > 0 || cat !== 'all');
+    countBox.textContent = (terms.length || cat !== 'all') ? '符合 ' + shown + ' 句（共 ' + cards.length + ' 句）' : '共 ' + cards.length + ' 句，可依分類篩選或輸入關鍵字';
+    emptyBox.hidden = shown > 0;
+  }
+  function copyText(span, btn) {
+    var text = (span.textContent || '').trim();
+    var done = function () {
+      btn.classList.add('done');
+      btn.textContent = '已複製 ✓';
+      setTimeout(function () { btn.classList.remove('done'); btn.textContent = '複製' + lang; }, 1600);
+    };
+    var fallback = function () {
+      try {
+        var sel = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(span);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        if (document.execCommand && document.execCommand('copy')) { done(); return; }
+      } catch (err) {}
+      btn.textContent = '已選取，請長按複製';
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      // 剪貼簿權限卡住時（部分瀏覽器會一直不回應），1.5 秒後改用選取文字
+      var settled = false;
+      var once = function (fn) { return function () { if (!settled) { settled = true; fn(); } }; };
+      setTimeout(once(fallback), 1500);
+      navigator.clipboard.writeText(text).then(once(done), once(fallback));
+    } else {
+      fallback();
+    }
+  }
+  tool.hidden = false;
+  apply();
+})();
 </script>
 </body>
 </html>
