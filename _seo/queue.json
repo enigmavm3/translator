@@ -220,9 +220,9 @@
    ],
    "notes": "",
    "priority": 60,
-   "status": "queued",
+   "status": "published",
    "serp_checked_on": "2026-11-07",
-   "published_at": null,
+   "published_at": "2026-11-26",
    "failed_reason": null,
    "commit": null,
    "evidence": [
